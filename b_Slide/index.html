@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedSched Pro v1.5.0 | Báo Cáo Đồ Án Capstone</title>
+  <meta name="description" content="Slide web thuyết trình bảo vệ đồ án tốt nghiệp MedSched - Hệ thống y tế thông minh đặt lịch khám và vận hành phòng khám đa cơ sở.">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="bg-mesh-glow"></div>
+
+  <!-- Main Slides Container -->
+  
+  <!-- Main Slides Container -->
+  <div class="slides-container" id="snapContainer">
+
+    <!-- SLIDE 01: BÌA ĐỀ TÀI -->
+    <section class="slide-section active" id="slide-01">
+      
+      <div class="content-box hero-box position-relative d-flex flex-column justify-content-between my-auto">
+        <!-- Top Header Bar: Logo ITC + Tên Trường & Khoa (Đưa lên đỉnh Slide 01 theo đúng vị trí khoanh đỏ) -->
+        <div class="slide-01-top-bar d-flex align-items-center justify-content-between w-100">
+          <div class="slide-01-brand-header">
+            <img src="./img/logo_itc.png" alt="Logo Trường Cao Đẳng Công Nghệ Thông Tin TP.HCM - ITC" class="itc-logo">
+            <div class="d-flex flex-column">
+              <span class="school-title">TRƯỜNG CAO ĐẲNG CÔNG NGHỆ THÔNG TIN TP.HCM</span>
+              <span class="school-sub">KHOA CÔNG NGHỆ THÔNG TIN — ĐỒ ÁN TỐT NGHIỆP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 g-xl-4 align-items-center w-100 mx-auto justify-content-between my-auto">
+          <!-- Cột Trái: Thông tin đề tài, GVHD & Nhóm thực hiện (Bố cục cân đối, liền mạch trang nhã) -->
+          <div class="col-lg-5 col-xl-5 text-start d-flex flex-column justify-content-center slide-01-left-col py-1">
+            <!-- Tiêu đề đề tài (Cân đối 2 dòng, không rớt chữ đơn) -->
+            <h1 class="display-title cover-title">
+              Nền Tảng Đặt Lịch Khám &amp; Vận Hành<br>
+              <span class="hero-gradient">Phòng Khám Đa Cơ Sở Cloud-Native</span>
+            </h1>
+
+            <!-- Khung thông tin GVHD & Nhóm -->
+            <div class="teacher-card d-flex flex-column gap-1.5 text-muted">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-mortarboard-fill text-primary me-2.5 fs-6"></i>
+                <span>GVHD: <strong class="text-slate-800">Thầy Trương Thanh Bình</strong></span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-people-fill text-teal me-2.5 fs-6"></i>
+                <span>Lớp: <strong class="text-slate-800">CD25CT_CLC</strong> — <strong class="text-slate-800">Nhóm 02</strong></span>
+              </div>
+            </div>
+
+            <!-- Điểm nhấn công nghệ (Nằm gọn gàng trên 1 hàng ngang cân xứng) -->
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <span class="tech-badge"><i class="bi bi-cpu text-primary me-1.5"></i>Spring AI Gemini</span>
+              <span class="tech-badge"><i class="bi bi-lock-fill text-teal me-1.5"></i>Atomic CAS Concurrency</span>
+              <span class="tech-badge"><i class="bi bi-database-check text-indigo me-1.5"></i>23 Bảng 3NF</span>
+            </div>
+          </div>
+
+          <!-- Cột Phải: Mockup Laptop & Phone hiển thị 2 Video UI Live Demo -->
+          <div class="col-lg-7 col-xl-7 d-flex justify-content-end p-0">
+            <div class="hero-showcase-container position-relative">
+              <!-- Mockup Laptop (Web Portal & Admin UI Video) -->
+              <div class="laptop-mockup-wrapper">
+                <div class="laptop-window-bar d-flex align-items-center justify-content-between px-3 py-2">
+                  <div class="d-flex align-items-center gap-1.5">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                  </div>
+                  <div class="laptop-url-pill text-truncate">
+                    <i class="bi bi-shield-check text-success me-1"></i>https://medsched.vn/portal
+                  </div>
+                  <div class="laptop-badge">
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill py-0.5 px-2.5 member-lead-badge">
+                      <i class="bi bi-laptop me-1"></i>Laptop View
+                    </span>
+                  </div>
+                </div>
+                <div class="laptop-screen-content">
+                  <video src="./video/UI_LapTop.mp4" autoplay muted loop playsinline preload="auto" class="laptop-video"></video>
+                </div>
+              </div>
+
+              <!-- Mockup Phone (Mobile PWA Video) -->
+              <div class="phone-mockup-wrapper">
+                <div class="phone-notch">
+                  <span class="phone-speaker"></span>
+                  <span class="phone-camera"></span>
+                </div>
+                <div class="phone-screen-content">
+                  <video src="./video/UI_Phone.mp4" autoplay muted loop playsinline preload="auto" class="phone-video"></video>
+                </div>
+                <div class="phone-bottom-bar">
+                  <span class="phone-home-indicator"></span>
+                </div>
+                <div class="phone-floating-tag">
+                  <i class="bi bi-phone-fill me-1"></i>Phone View
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+    </section>
+
+    
+    <!-- SLIDE 02: TỔNG QUAN ĐỀ TÀI & LỘ TRÌNH BÁO CÁO -->
+    <!-- SLIDE 02: ĐỘI NGŨ THỰC HIỆN & PHÂN CÔNG NHIỆM VỤ -->
+    <section class="slide-section" id="slide-02">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">01. Đội Ngũ Phát Triển</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <div class="row g-3 flex-grow-1 align-content-stretch my-auto py-1">
+          <!-- 1. CHÂU TUẤN KIỆT -->
+          <div class="col-md-4">
+            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-primary">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-2.5">
+                  <div class="member-avatar-wrap position-relative">
+                    <img src="./img/avatar_kiet.png?v=2" alt="Châu Tuấn Kiệt" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback bg-primary-subtle text-primary border border-primary">
+                      <i class="bi bi-person-fill fs-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-800 mb-0">Châu Tuấn Kiệt</h5>
+                    <span class="badge bg-primary text-white py-0.5 px-2 member-role-badge">Leader / Architect</span>
+                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">506250495</span>
+                  </div>
+                </div>
+                <div class="member-tasks-list">
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-primary me-1.5"></i>Thiết kế kiến trúc Hexagonal (Clean Architecture).</div>
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-primary me-1.5"></i>Chuẩn hóa quy trình Git Flow 6 người &amp; CI/CD.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-primary me-1.5"></i>Tích hợp hệ thống và điều phối tiến độ toàn dự án.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. NGUYỄN THỊ YẾN NHI -->
+          <div class="col-md-4">
+            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-amber">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-2.5">
+                  <div class="member-avatar-wrap position-relative">
+                    <img src="./img/avatar_nhi.png" alt="Nguyễn Thị Yến Nhi" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback bg-amber-subtle text-amber border border-warning avatar-fallback-amber">
+                      <i class="bi bi-person-fill fs-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-800 mb-0">Nguyễn Thị Yến Nhi</h5>
+                    <span class="badge bg-amber text-white py-0.5 px-2 bg-amber-accent member-role-badge">Business Analyst (BA)</span>
+                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250145</span>
+                  </div>
+                </div>
+                <div class="member-tasks-list">
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-amber me-1.5"></i>Đặc tả tài liệu SRS F01–F26 chuẩn IEEE 830.</div>
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-amber me-1.5"></i>Thiết kế Ma trận phân quyền 4 Roles (RBAC).</div>
+                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-amber me-1.5"></i>Xây dựng kịch bản nghiệm thu kiểm thử UAT.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. LÊ THÀNH TÀI -->
+          <div class="col-md-4">
+            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-teal">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-2.5">
+                  <div class="member-avatar-wrap position-relative">
+                    <img src="./img/avatar_tai.png" alt="Lê Thành Tài" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback bg-teal-subtle text-teal border border-teal avatar-fallback-teal">
+                      <i class="bi bi-person-fill fs-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-800 mb-0">Lê Thành Tài</h5>
+                    <span class="badge bg-teal text-white py-0.5 px-2 bg-teal-accent member-role-badge">Database &amp; Persistence</span>
+                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250471</span>
+                  </div>
+                </div>
+                <div class="member-tasks-list">
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-teal me-1.5"></i>Thiết kế CSDL 23 bảng chuẩn hóa bậc 3 (3NF).</div>
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-teal me-1.5"></i>Toàn vẹn ràng buộc khóa ngoại (FK) &amp; Index.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-teal me-1.5"></i>Cài đặt JPA Persistence Adapter &amp; Seed data.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. NGUYỄN VĂN HIẾU -->
+          <div class="col-md-4">
+            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-danger">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-2.5">
+                  <div class="member-avatar-wrap position-relative">
+                    <img src="./img/avatar_hieu.png" alt="Nguyễn Văn Hiếu" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback bg-danger-subtle text-danger border border-danger">
+                      <i class="bi bi-person-fill fs-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-800 mb-0">Nguyễn Văn Hiếu</h5>
+                    <span class="badge bg-danger text-white py-0.5 px-2 member-role-badge">Core Backend &amp; Concurrency</span>
+                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250367</span>
+                  </div>
+                </div>
+                <div class="member-tasks-list">
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-danger me-1.5"></i>Lập trình giải thuật Concurrency Atomic CAS.</div>
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-danger me-1.5"></i>Cơ chế bảo mật JWT Single Session (1 phiên).</div>
+                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-danger me-1.5"></i>Xây dựng toàn bộ các Use Case nghiệp vụ lõi.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. HUỲNH THỊ KIM TRANG -->
+          <div class="col-md-4">
+            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-purple">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-2.5">
+                  <div class="member-avatar-wrap position-relative">
+                    <img src="./img/avatar_trang.png" alt="Huỳnh Thị Kim Trang" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback bg-purple-subtle text-purple border border-purple avatar-fallback-purple">
+                      <i class="bi bi-person-fill fs-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-800 mb-0">Huỳnh Thị Kim Trang</h5>
+                    <span class="badge text-white py-0.5 px-2 bg-purple-accent member-role-badge">Frontend Developer</span>
+                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250114</span>
+                  </div>
+                </div>
+                <div class="member-tasks-list">
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-purple me-1.5"></i>Xây dựng toàn bộ 22 màn hình Next.js 15.</div>
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-purple me-1.5"></i>Tối ưu 100% Responsive Desktop/Tablet/Mobile.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-purple me-1.5"></i>Tích hợp máy quét Camera QR tiếp đón 1 giây.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. TRẦN NHẬT TÂN -->
+          <div class="col-md-4">
+            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-success">
+              <div>
+                <div class="d-flex align-items-center gap-3 mb-2.5">
+                  <div class="member-avatar-wrap position-relative">
+                    <img src="./img/avatar_tan.png" alt="Trần Nhật Tân" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar-fallback bg-success-subtle text-success border border-success avatar-fallback-success">
+                      <i class="bi bi-person-fill fs-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-800 mb-0">Trần Nhật Tân</h5>
+                    <span class="badge bg-success text-white py-0.5 px-2 member-role-badge">AI Engineer &amp; Live Demo</span>
+                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250392</span>
+                  </div>
+                </div>
+                <div class="member-tasks-list">
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-success me-1.5"></i>Tích hợp Spring AI ChatClient (Gemini 2.5).</div>
+                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-success me-1.5"></i>Kiểm thử tự động hệ thống bộ 160 bài test.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-success me-1.5"></i>Xây dựng &amp; điều phối kịch bản Live Demo.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide-section" id="slide-03">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">02. Nghiệp Vụ 1 Ca Khám Hoàn Chỉnh</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <div class="workflow-section-wrap">
+          <div class="workflow-diagram-frame diagram-img-frame" title="Click để phóng to sơ đồ">
+            <img src="./img/VongDoiCaKham_Slide2.png" alt="Vòng đời ca khám 5 bước" class="workflow-diagram-img diagram-img">
+          </div>
+
+          <div class="workflow-steps-grid">
+            <!-- BƯỚC 1: BỆNH NHÂN -->
+            <div class="workflow-step-card step-patient">
+              <div class="step-card-header">
+                <span class="step-index-pill">BƯỚC 01</span>
+                <span class="step-role-badge badge-patient"><i class="bi bi-person-fill"></i> Bệnh Nhân</span>
+              </div>
+              <h6 class="step-card-title">Đặt Lịch Trực Tuyến</h6>
+              <ul class="step-feature-list">
+                <li><i class="bi bi-check2 text-primary"></i><span><strong>Spring AI:</strong> Phân khoa Gemini</span></li>
+                <li><i class="bi bi-check2 text-primary"></i><span><strong>Atomic CAS:</strong> Khóa slot 0% trùng</span></li>
+                <li><i class="bi bi-check2 text-primary"></i><span><strong>VietQR:</strong> Cọc giữ chỗ sinh mã QR</span></li>
+              </ul>
+              <div class="step-card-footer">
+                <span class="step-status-chip">Trạng thái: <code>BOOKED</code></span>
+              </div>
+            </div>
+
+            <!-- BƯỚC 2: LỄ TÂN -->
+            <div class="workflow-step-card step-reception">
+              <div class="step-card-header">
+                <span class="step-index-pill">BƯỚC 02</span>
+                <span class="step-role-badge badge-reception"><i class="bi bi-qr-code-scan"></i> Lễ Tân</span>
+              </div>
+              <h6 class="step-card-title">Tiếp Đón &amp; Cấp STT</h6>
+              <ul class="step-feature-list">
+                <li><i class="bi bi-check2 text-info"></i><span><strong>Camera QR:</strong> Check-in quét mã &lt; 2s</span></li>
+                <li><i class="bi bi-check2 text-info"></i><span><strong>Cấp STT:</strong> Đẩy vào hàng đợi buồng</span></li>
+                <li><i class="bi bi-check2 text-info"></i><span><strong>Realtime:</strong> Thông báo tới Bác sĩ</span></li>
+              </ul>
+              <div class="step-card-footer">
+                <span class="step-status-chip">Trạng thái: <code>CHECKED_IN</code></span>
+              </div>
+            </div>
+
+            <!-- BƯỚC 3: BÁC SĨ -->
+            <div class="workflow-step-card step-doctor">
+              <div class="step-card-header">
+                <span class="step-index-pill">BƯỚC 03</span>
+                <span class="step-role-badge badge-doctor"><i class="bi bi-heart-pulse-fill"></i> Bác Sĩ</span>
+              </div>
+              <h6 class="step-card-title">Khám &amp; Kê Đơn EHR</h6>
+              <ul class="step-feature-list">
+                <li><i class="bi bi-check2 text-warning"></i><span><strong>Bệnh án EHR:</strong> Lịch sử y khoa</span></li>
+                <li><i class="bi bi-check2 text-warning"></i><span><strong>Mã ICD-10:</strong> Gợi ý chẩn đoán chuẩn</span></li>
+                <li><i class="bi bi-check2 text-warning"></i><span><strong>Đơn thuốc số:</strong> Chuyển sang dược</span></li>
+              </ul>
+              <div class="step-card-footer">
+                <span class="step-status-chip">Trạng thái: <code>IN_PROGRESS</code></span>
+              </div>
+            </div>
+
+            <!-- BƯỚC 4: THU NGÂN -->
+            <div class="workflow-step-card step-cashier">
+              <div class="step-card-header">
+                <span class="step-index-pill">BƯỚC 04</span>
+                <span class="step-role-badge badge-cashier"><i class="bi bi-cash-stack"></i> Thu Ngân</span>
+              </div>
+              <h6 class="step-card-title">Viện Phí &amp; Xuất Viện</h6>
+              <ul class="step-feature-list">
+                <li><i class="bi bi-check2 text-success"></i><span><strong>Voucher:</strong> Tự động trừ khuyến mãi</span></li>
+                <li><i class="bi bi-check2 text-success"></i><span><strong>PayOS Webhook:</strong> Gạch nợ tức thì</span></li>
+                <li><i class="bi bi-check2 text-success"></i><span><strong>Hóa đơn điện tử:</strong> Xuất viện nhanh</span></li>
+              </ul>
+              <div class="step-card-footer">
+                <span class="step-status-chip">Trạng thái: <code>COMPLETED</code></span>
+              </div>
+            </div>
+
+            <!-- BƯỚC 5: GIÁM ĐỐC -->
+            <div class="workflow-step-card step-admin">
+              <div class="step-card-header">
+                <span class="step-index-pill">BƯỚC 05</span>
+                <span class="step-role-badge badge-admin"><i class="bi bi-graph-up-arrow"></i> Ban Giám Đốc</span>
+              </div>
+              <h6 class="step-card-title">Giám Sát Realtime</h6>
+              <ul class="step-feature-list">
+                <li><i class="bi bi-check2 text-purple"></i><span><strong>BI Dashboard:</strong> Doanh thu tức thì</span></li>
+                <li><i class="bi bi-check2 text-purple"></i><span><strong>Tải buồng khám:</strong> Cảnh báo nghẽn</span></li>
+                <li><i class="bi bi-check2 text-purple"></i><span><strong>SRE Monitoring:</strong> Đo SLA 99.9%</span></li>
+              </ul>
+              <div class="step-card-footer">
+                <span class="step-status-chip">Phạm vi: <code>TOÀN VIỆN</code></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- SLIDE 04: KIẾN TRÚC TỔNG THỂ HỆ THỐNG (HIGH-LEVEL ARCHITECTURE) -->
+    <section class="slide-section" id="slide-04">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">03. Kiến Trúc Tổng Thể Hệ Thống (High-Level Architecture)</h2>
+            <a href="./medsched_archify_architecture.html" target="_blank" class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1 py-0.5 px-2">
+              <i class="bi bi-box-arrow-up-right"></i> Mở toàn màn hình
+            </a>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <div class="diagram-slide-body row g-3 align-items-center justify-content-center my-auto">
+          <div class="col-12 d-flex justify-content-center">
+            <div class="archify-frame-container">
+              <iframe src="./medsched_archify_architecture.html?embed=true" title="Sơ đồ Kiến trúc Tổng thể Hệ thống MedSched Pro" class="archify-iframe" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide-section" id="slide-05">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">04. Kiến Trúc Lõi Hexagonal (Ports &amp; Adapters)</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <div class="diagram-slide-body row g-3 align-items-center my-auto">
+          <div class="col-lg-8 col-xl-9 d-flex justify-content-center">
+            <div class="diagram-img-frame">
+              <img src="./img/SoDo_LucGiac_Slide3.png" alt="Kiến trúc lục giác MedSched" class="diagram-img">
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 d-flex flex-column gap-2">
+            <div class="key-point-card border-left-red">
+              <span class="badge bg-danger text-white mb-1">Tâm Lục Giác</span>
+              <h6 class="fw-bold">Lõi Core Domain (0% Spring)</h6>
+              <p class="mb-0">Hoàn toàn là Java 21 thuần túy, chứa các thực thể và Use Case y tế độc lập 100% với Spring Framework.</p>
+            </div>
+            <div class="key-point-card border-left-emerald">
+              <span class="badge bg-success text-white mb-1">3 Cạnh Bên Trái</span>
+              <h6 class="fw-bold">Inbound Ports &amp; Adapters</h6>
+              <p class="mb-0">Cổng tiếp nhận yêu cầu từ Web Next.js 15, máy quét mã QR tiếp đón và Filter kiểm soát JWT 1 phiên duy nhất.</p>
+            </div>
+            <div class="key-point-card border-left-purple">
+              <span class="badge text-white mb-1 bg-purple-accent">3 Cạnh Bên Phải</span>
+              <h6 class="fw-bold">Outbound Ports &amp; Adapters</h6>
+              <p class="mb-0">Cổng cắm ngoại vi: Spring Data JPA (MySQL 23 bảng), Spring AI (Gemini 2.5 Flash) và VietQR tự động.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <section class="slide-section" id="slide-06">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">05. Mô Hình CSDL 23 Bảng Chuẩn 3NF (Trích Xuất DBeaver)</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <div class="diagram-slide-body row g-3 align-items-center my-auto">
+          <!-- Cột Trái: Window Mockup khung CSDL chuyên nghiệp -->
+          <div class="col-lg-5 col-xl-5 d-flex justify-content-center">
+            <div class="diagram-img-frame diagram-frame-db" title="Click để phóng to toàn màn hình">
+              <div class="db-mockup-header">
+                <div class="db-mockup-dots">
+                  <span class="db-mockup-dot db-dot-red"></span>
+                  <span class="db-mockup-dot db-dot-yellow"></span>
+                  <span class="db-mockup-dot db-dot-green"></span>
+                </div>
+                <span class="db-mockup-title">DBeaver ERD • MySQL 8.0</span>
+                <span class="db-mockup-badge"><i class="bi bi-zoom-in me-1"></i>Zoom ERD</span>
+              </div>
+              <div class="db-mockup-body">
+                <img src="./img/medsched_db.png" alt="Sơ đồ 23 bảng CSDL MedSched" class="diagram-img diagram-img-db">
+                <div class="db-zoom-floating-hint"><i class="bi bi-arrows-fullscreen"></i> Phóng to</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột Phải: 3 Thẻ cô đọng, cân đối, chống tràn tuyệt đối -->
+          <div class="col-lg-7 col-xl-7 slide-06-cards-col">
+            <!-- Thẻ 1: 17 Bảng Nghiệp Vụ Lâm Sàng -->
+            <div class="key-point-card db-card-compact border-left-blue">
+              <div class="db-card-header">
+                <span class="badge bg-primary text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-hospital me-1"></i>Nghiệp Vụ Lâm Sàng</span>
+                <span class="badge bg-primary-subtle text-primary fw-bold font-monospace px-2 py-0.5 card-badge-sm">17 / 23 Bảng</span>
+              </div>
+              <h6 class="db-card-title">17 Bảng Vận Hành Quy Trình Y Tế Cốt Lõi</h6>
+              <div class="db-card-body">
+                <div class="db-card-line"><strong>• Quản trị &amp; Phân quyền:</strong> <code class="db-table-chip">users</code>, <code class="db-table-chip">patient_profiles</code>, <code class="db-table-chip">medical_centers</code>, <code class="db-table-chip">roles</code> (Đa cơ sở, 4 Roles RBAC).</div>
+                <div class="db-card-line"><strong>• Lịch khám &amp; CAS:</strong> <code class="db-table-chip">doctors</code>, <code class="db-table-chip">specialties</code>, <code class="db-table-chip">doctor_schedules</code>, <code class="db-table-chip">time_slots</code> (Khóa slot nguyên tử chống trùng).</div>
+                <div class="db-card-line"><strong>• Hồ sơ &amp; Viện phí:</strong> <code class="db-table-chip">appointments</code>, <code class="db-table-chip">medical_records</code> (ICD-10), <code class="db-table-chip">medicines</code>, <code class="db-table-chip">prescriptions</code>, <code class="db-table-chip">invoices</code>, <code class="db-table-chip">payments</code>.</div>
+              </div>
+            </div>
+
+            <!-- Thẻ 2: 6 Bảng Hạ Tầng Kỹ Thuật & Bảo Mật -->
+            <div class="key-point-card db-card-compact border-left-teal">
+              <div class="db-card-header">
+                <span class="badge text-white py-0.5 px-2 bg-teal-accent card-badge-sm"><i class="bi bi-shield-lock me-1"></i>Hạ Tầng Kỹ Thuật &amp; Bảo Mật</span>
+                <span class="badge bg-teal-subtle text-teal fw-bold font-monospace px-2 py-0.5 card-badge-sm">6 / 23 Bảng</span>
+              </div>
+              <h6 class="db-card-title">6 Bảng Phụ Trợ Single Session JWT, Voucher &amp; Cấu Hình</h6>
+              <div class="db-card-body">
+                <div class="db-card-line"><strong>• JWT Single Session:</strong> <code class="db-table-chip">revoked_tokens</code> (Blacklist token tức thì khi đăng nhập máy mới, triệt tiêu chiếm phiên).</div>
+                <div class="db-card-line"><strong>• Khôi phục tài khoản:</strong> <code class="db-table-chip">password_reset_tokens</code> (Token OTP mã hóa, tự hủy sau 15 phút).</div>
+                <div class="db-card-line"><strong>• Tiện ích hệ thống:</strong> <code class="db-table-chip">promotions</code> (Voucher viện phí), <code class="db-table-chip">system_settings</code>, <code class="db-table-chip">doctor_reviews</code>, <code class="db-table-chip">dev_mode_sessions</code>.</div>
+              </div>
+            </div>
+
+            <!-- Thẻ 3: Quy Hoạch Chuẩn 3NF & Tối Ưu Hóa Index -->
+            <div class="key-point-card db-card-compact border-left-green">
+              <div class="db-card-header">
+                <span class="badge bg-success text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-check2-all me-1"></i>Chuẩn Hóa 3NF &amp; Toàn Vẹn Quan Hệ</span>
+                <span class="badge bg-success-subtle text-success fw-bold font-monospace px-2 py-0.5 card-badge-sm">100% Chuẩn 3NF</span>
+              </div>
+              <h6 class="db-card-title">Ràng Buộc Khóa Ngoại Đa Chiều &amp; Đánh Chỉ Mục Index Tối Ưu</h6>
+              <div class="db-card-body">
+                <div class="db-card-line"><strong>• Chuẩn 3NF toàn diện:</strong> Loại bỏ triệt để phụ thuộc bắc cầu; 100% bảng có Khóa chính PK (BIGINT/UUID).</div>
+                <div class="db-card-line"><strong>• Ràng buộc FK &amp; Composite Index:</strong> Khóa ngoại <code class="db-table-chip">ON DELETE RESTRICT</code> chống dữ liệu mồ côi; Composite Index trên <code class="db-table-chip">(doctor_id, schedule_date)</code>, <code class="db-table-chip">booking_code</code> truy vấn &lt; 15ms.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="slide-section" id="slide-07">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">06. Giải Quyết Xung Đột Concurrency: Khóa Atomic CAS &amp; Spring AI</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <div class="diagram-slide-body row g-3 align-items-center my-auto">
+          <div class="col-lg-8 col-xl-9 d-flex justify-content-center">
+            <div class="diagram-img-frame">
+              <img src="./img/so_do_slide_05_concurrency.png" alt="Sơ đồ tuần tự Atomic CAS" class="diagram-img">
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 d-flex flex-column gap-2">
+            <div class="key-point-card border-left-blue">
+              <span class="badge bg-primary text-white mb-1">Spring AI Triage</span>
+              <h6 class="fw-bold">Gemini 2.5 Flash Phân Khoa</h6>
+              <p class="mb-0">Tiếp nhận triệu chứng tự nhiên, phân luồng đúng chuyên khoa và trích xuất tóm tắt bệnh lý cho Bác sĩ.</p>
+            </div>
+            <div class="key-point-card border-left-red">
+              <span class="badge bg-danger text-white mb-1">Giải Thuật CAS</span>
+              <h6 class="fw-bold">Khóa Lạc Quan Nguyên Tử</h6>
+              <p class="mb-0">Lệnh `UPDATE time_slots SET status='BOOKED' WHERE id=:id AND status='AVAILABLE'` chống double-booking 100%.</p>
+            </div>
+            <div class="key-point-card border-left-amber">
+              <span class="badge bg-amber text-white mb-1 bg-amber-accent">Cơ Chế Phục Hồi</span>
+              <h6 class="fw-bold">Fallback &amp; Cron 15 Phút</h6>
+              <p class="mb-0">Người thất bại nhận 409 và gợi ý giờ tiếp theo. Cron Job 15p tự động nhả slot nếu không cọc VietQR.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 07: GIÁM SÁT HỆ THỐNG PROMETHEUS & GRAFANA -->
+        <section class="slide-section" id="slide-08">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">07. Giám Sát Hiệu Năng: Prometheus &amp; Grafana</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <div class="diagram-slide-body row g-3 align-items-center my-auto">
+          <!-- Cột Trái: Window Mockup Grafana Dashboard 60% -->
+          <div class="col-lg-7 col-xl-7 grafana-split-left">
+            <div class="diagram-img-frame grafana-window-mockup" title="Click để phóng to toàn màn hình">
+              <div class="grafana-window-header">
+                <div class="grafana-window-dots">
+                  <span class="db-mockup-dot db-dot-red"></span>
+                  <span class="db-mockup-dot db-dot-yellow"></span>
+                  <span class="db-mockup-dot db-dot-green"></span>
+                </div>
+                <span class="grafana-window-title">Grafana v10.4 • MedSched Production</span>
+                <span class="grafana-live-pill"><i class="bi bi-circle-fill"></i> Live 5s</span>
+              </div>
+              <div class="grafana-window-body">
+                <img src="./img/SoDo_Grafana_Slide6.jpg" alt="Dashboard Giám sát Grafana MedSched Cloud Production" class="diagram-img diagram-img-grafana">
+                <div class="grafana-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Phóng to</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột Phải: 3 Thẻ SRE Architecture & Monitoring Insights 40% -->
+          <div class="col-lg-5 col-xl-5 grafana-split-right">
+            <!-- Thẻ 1: Prometheus TSDB Scraper -->
+            <div class="key-point-card sre-card border-left-amber">
+              <div class="sre-card-header">
+                <span class="badge bg-warning text-dark fw-bold py-0.5 px-2 card-badge-sm"><i class="bi bi-broadcast me-1"></i>Prometheus TSDB</span>
+                <span class="badge bg-warning-subtle text-dark fw-bold font-monospace px-2 py-0.5 card-badge-sm">Scrape: 5s</span>
+              </div>
+              <h6 class="sre-card-title">Thu Thập Số Liệu Realtime Qua Spring Actuator</h6>
+              <div class="sre-card-body">
+                <div class="sre-card-line"><strong>• Endpoint Scrape:</strong> Cào dữ liệu định kỳ mỗi 5 giây từ <code class="sre-metric-chip">:8080/actuator/prometheus</code>.</div>
+                <div class="sre-card-line"><strong>• Golden Signals:</strong> Đo lường 4 tín hiệu vàng: Độ trễ (Latency), Lưu lượng (Traffic), Lỗi (Errors) và Bão hòa (Saturation).</div>
+              </div>
+            </div>
+
+            <!-- Thẻ 2: Quản Trị Sức Khỏe Máy Chủ & JVM Heap -->
+            <div class="key-point-card sre-card border-left-green">
+              <div class="sre-card-header">
+                <span class="badge bg-success text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-cpu me-1"></i>Sức Khỏe JVM &amp; Cloud</span>
+                <span class="badge bg-success-subtle text-success fw-bold font-monospace px-2 py-0.5 card-badge-sm">Uptime: 4.65 Days</span>
+              </div>
+              <h6 class="sre-card-title">Tối Ưu Hóa Bộ Nhớ &amp; Giám Sát DB Pool</h6>
+              <div class="sre-card-body">
+                <div class="sre-card-line"><strong>• Bộ nhớ JVM Heap:</strong> Duy trì ở mức tối ưu <code class="sre-metric-chip">54.8 MB</code> / <code class="sre-metric-chip">256 MB Max</code>, cơ chế GC tự động giải phóng tức thì.</div>
+                <div class="sre-card-line"><strong>• Tải CPU &amp; HikariCP:</strong> CPU máy chủ duy trì an toàn ở <code class="sre-metric-chip">19.0%</code>; giám sát Connection Pool với <code class="sre-metric-chip">0 Leak</code>.</div>
+              </div>
+            </div>
+
+            <!-- Thẻ 3: Cam Kết SLA & Cảnh Báo Chủ Động -->
+            <div class="key-point-card sre-card border-left-blue">
+              <div class="sre-card-header">
+                <span class="badge bg-primary text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-shield-check me-1"></i>SLA &amp; Cảnh Báo</span>
+                <span class="badge bg-primary-subtle text-primary fw-bold font-monospace px-2 py-0.5 card-badge-sm">SLA 99.9%</span>
+              </div>
+              <h6 class="sre-card-title">Độ Trễ Phản Hồi Tức Thì &amp; Tự Động Cảnh Báo</h6>
+              <div class="sre-card-body">
+                <div class="sre-card-line"><strong>• Độ trễ API (p99):</strong> Các luồng đặt khám và Webhook thanh toán VietQR luôn phản hồi dưới <code class="sre-metric-chip">&lt; 15ms</code>.</div>
+                <div class="sre-card-line"><strong>• Threshold Alerting:</strong> Thiết lập ngưỡng kích hoạt cảnh báo tự động khi CPU &gt; 80% hoặc Heap Memory vượt 85%.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="slide-section" id="slide-09">
+      <div class="content-box d-flex flex-column justify-content-between text-center position-relative">
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">08. Trình Diễn Live Demo</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <!-- Chữ DEMO khổng lồ chính giữa màn hình -->
+        <div class="my-auto py-5 d-flex flex-column align-items-center justify-content-center">
+          <h1 class="fw-black mb-0 demo-display-title">
+            DEMO
+          </h1>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Left Side Slide Indicators (8 Slides Toàn Diện Chuẩn Doanh Nghiệp) -->
+  <nav class="side-number-indicator-list" id="sideNav" aria-label="Mục lục Slide">
+    <a href="#slide-01" class="side-number-item active" data-index="0" data-tooltip="Bìa Báo Cáo"><i class="bi bi-house-door-fill fs-icon-xs"></i></a>
+    <a href="#slide-02" class="side-number-item" data-index="1" data-tooltip="01. Đội Ngũ Phát Triển">01</a>
+    <a href="#slide-03" class="side-number-item" data-index="2" data-tooltip="02. Nghiệp Vụ 1 Ca Khám">02</a>
+    <a href="#slide-04" class="side-number-item" data-index="3" data-tooltip="03. Kiến Trúc Tổng Thể">03</a>
+    <a href="#slide-05" class="side-number-item" data-index="4" data-tooltip="04. Lõi Hexagonal">04</a>
+    <a href="#slide-06" class="side-number-item" data-index="5" data-tooltip="05. CSDL 23 Bảng 3NF">05</a>
+    <a href="#slide-07" class="side-number-item" data-index="6" data-tooltip="06. Atomic CAS & Spring AI">06</a>
+    <a href="#slide-08" class="side-number-item" data-index="7" data-tooltip="07. Prometheus & Grafana">07</a>
+    <a href="#slide-09" class="side-number-item" data-index="8" data-tooltip="08. Live Demo & Q&A">08</a>
+  </nav>
+
+<!-- Bottom Floating Navigation Toolbar -->
+  <div class="bottom-nav-bar" id="bottomNav">
+    <button type="button" class="nav-arrow-btn" id="prevSlideBtn" title="Slide trước (← hoặc Phím lên)" aria-label="Slide trước"><i class="bi bi-chevron-left"></i></button>
+    <div class="slide-indicator-label" id="slideIndicatorLabel">01 / 09</div>
+    <button type="button" class="nav-arrow-btn" id="nextSlideBtn" title="Slide kế (→ hoặc Phím cách)" aria-label="Slide kế tiếp"><i class="bi bi-chevron-right"></i></button>
+    <button type="button" class="nav-arrow-btn" id="fullScreenBtn" title="Toàn màn hình trình chiếu (Phím F)" aria-label="Toàn màn hình trình chiếu"><i class="bi bi-arrows-fullscreen"></i></button>
+  </div>
+
+  <!-- Interactive Fullscreen Lightbox Modal -->
+  <div id="imageLightboxModal" class="image-lightbox-modal">
+    <div class="lightbox-toolbar">
+      <div class="lightbox-title text-truncate" id="lightboxTitle">Sơ đồ kỹ thuật MedSched Pro</div>
+      <div class="lightbox-actions">
+        <button type="button" class="lightbox-btn" id="lightboxZoomIn" title="Phóng to (+)"><i class="bi bi-zoom-in"></i></button>
+        <button type="button" class="lightbox-btn" id="lightboxZoomOut" title="Thu nhỏ (-)"><i class="bi bi-zoom-out"></i></button>
+        <button type="button" class="lightbox-btn" id="lightboxReset" title="Về ban đầu 100%"><i class="bi bi-arrow-counterclockwise"></i></button>
+        <button type="button" class="lightbox-btn btn-close-modal" id="lightboxClose" title="Đóng (Phím Esc)"><i class="bi bi-x-lg"></i></button>
+      </div>
+    </div>
+
+    <div class="lightbox-viewport" id="lightboxViewport">
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Zoomable diagram">
+    </div>
+
+    <div class="lightbox-hint">
+      <i class="bi bi-arrows-move me-1.5 text-primary"></i><strong>Nắm kéo chuột</strong> để di chuyển • <strong>Cuộn chuột</strong> để phóng to/thu nhỏ • Bấm <strong>Esc</strong> để đóng
+    </div>
+  </div>
+
+  <!-- JavaScript Controls & Presentation Logic -->
+  <script src="./js/script.js"></script>
+</body>
+</html>

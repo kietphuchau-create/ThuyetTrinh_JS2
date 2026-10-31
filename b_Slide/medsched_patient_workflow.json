@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "MedSched Pro: Vòng đời nghiệp vụ 1 ca khám bệnh hoàn chỉnh",
+    "animation": "trace",
+    "visual_preset": "signal-flow",
+    "quality_profile": "showcase",
+    "output": "08_TaiLieuTongHop/04_Bai_Thuyet_Trinh/b_Slide/medsched_patient_workflow.html"
+  },
+  "lanes": [
+    { "id": "patient", "label": "Bệnh Nhân" },
+    { "id": "reception", "label": "Lễ Tân" },
+    { "id": "doctor", "label": "Bác Sĩ" },
+    { "id": "cashier", "label": "Thu Ngân" },
+    { "id": "director", "label": "Ban Giám Đốc" }
+  ],
+  "phases": [
+    { "id": "p1", "label": "1. Đặt lịch online", "fromCol": 0, "toCol": 1 },
+    { "id": "p2", "label": "2. Tiếp đón QR", "fromCol": 2, "toCol": 2, "variant": "emphasis" },
+    { "id": "p3", "label": "3. Buồng khám EHR", "fromCol": 3, "toCol": 3 },
+    { "id": "p4", "label": "4. Thanh toán", "fromCol": 4, "toCol": 4, "variant": "emphasis" },
+    { "id": "p5", "label": "5. Báo cáo SRE", "fromCol": 5, "toCol": 5, "variant": "dashed" }
+  ],
+  "mainPath": [
+    "node_ai_triage",
+    "node_cas_pay",
+    "node_qr_checkin",
+    "node_ehr_exam",
+    "node_checkout",
+    "node_dashboard"
+  ],
+  "nodes": [
+    {
+      "id": "node_ai_triage",
+      "lane": "patient",
+      "col": 0,
+      "type": "frontend",
+      "label": "Spring AI Triage",
+      "sublabel": "Tư vấn triệu chứng & khoa",
+      "tag": "Next.js 15",
+      "width": 140
+    },
+    {
+      "id": "node_cas_pay",
+      "lane": "patient",
+      "col": 1,
+      "type": "backend",
+      "label": "Khóa CAS & Cọc QR",
+      "sublabel": "Atomic Slot + VietQR PayOS",
+      "tag": "Vé Hẹn QR",
+      "width": 140
+    },
+    {
+      "id": "node_qr_checkin",
+      "lane": "reception",
+      "col": 2,
+      "type": "security",
+      "label": "Quét Camera QR",
+      "sublabel": "Cấp số STT buồng khám",
+      "tag": "CHECKED_IN",
+      "width": 140
+    },
+    {
+      "id": "node_ehr_exam",
+      "lane": "doctor",
+      "col": 3,
+      "type": "backend",
+      "label": "Khám EHR & ICD-10",
+      "sublabel": "Bệnh án số & Kê toa thuốc",
+      "tag": "IN_PROGRESS",
+      "width": 140
+    },
+    {
+      "id": "node_checkout",
+      "lane": "cashier",
+      "col": 4,
+      "type": "cloud",
+      "label": "Thu phí & Xuất viện",
+      "sublabel": "Áp voucher, POS/QR",
+      "tag": "COMPLETED",
+      "width": 140
+    },
+    {
+      "id": "node_dashboard",
+      "lane": "director",
+      "col": 5,
+      "type": "messagebus",
+      "label": "Realtime Dashboard",
+      "sublabel": "Doanh thu & công suất buồng",
+      "tag": "Grafana / SRE",
+      "width": 140
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "node_ai_triage",
+      "to": "node_cas_pay",
+      "label": "chọn giờ",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e2",
+      "from": "node_cas_pay",
+      "to": "node_qr_checkin",
+      "label": "đến viện",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e3",
+      "from": "node_qr_checkin",
+      "to": "node_ehr_exam",
+      "label": "vào khám",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e4",
+      "from": "node_ehr_exam",
+      "to": "node_checkout",
+      "label": "kê đơn",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e5",
+      "from": "node_checkout",
+      "to": "node_dashboard",
+      "label": "đồng bộ số",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Tự Động Hóa Đặt Lịch",
+      "items": [
+        "Trợ lý Spring AI phân khoa chính xác theo triệu chứng ban đầu",
+        "Thuật toán Atomic CAS khóa lịch độc quyền chống chồng chéo giờ",
+        "Cổng thanh toán VietQR / PayOS cấp vé hẹn QR tức thì"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Check-in & Khám Liền Mạch",
+      "items": [
+        "Quét camera QR tại quầy tiếp đón mất dưới 2 giây",
+        "Tự động cấp STT và định tuyến bệnh nhân đến đúng buồng bác sĩ",
+        "Bác sĩ mở bệnh án EHR số hóa và kê đơn thuốc chuẩn danh mục ICD-10"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Thanh Toán & Giám Sát Tức Thì",
+      "items": [
+        "Thu ngân tự động trừ voucher và xuất hóa đơn số",
+        "Trạng thái ca khám chuyển COMPLETED an toàn toàn vẹn",
+        "Ban giám đốc theo dõi doanh thu và công suất tải buồng khám theo thời gian thực"
+      ]
+    }
+  ]
+}

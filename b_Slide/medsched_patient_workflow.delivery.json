@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "ceb28d79-fbdf-46ce-8cbb-a88143ac8b81",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "d:\\MonHocITC\\Javaspring2\\08_TaiLieuTongHop\\04_Bai_Thuyet_Trinh\\b_Slide\\medsched_patient_workflow.json",
+  "output": "D:\\MonHocITC\\Javaspring2\\08_TaiLieuTongHop\\04_Bai_Thuyet_Trinh\\b_Slide\\medsched_patient_workflow.html",
+  "specification": {
+    "sha256": "9032bc6eb0835f7b3767546c72f86d8db70d7645ad0d4e67f183807b46b87e12",
+    "bytes": 4618
+  },
+  "artifact": {
+    "sha256": "402964500ff30f9db11863cb9ac3585b427cb2b896daffd7f2baacd382a8cd0f",
+    "bytes": 842350
+  }
+}
