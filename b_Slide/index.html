@@ -130,116 +130,188 @@
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
 
-        <!-- 4 Phân Hệ Cốt Lõi (4 Cột Đầy Đủ Không Gian) -->
-        <div class="row g-3 my-auto align-items-stretch" style="flex: 1; padding: 8px 0;">
+        <!-- 4 Phân Hệ Cốt Lõi (Cân Đối & Đầy Đặn Tuyệt Đối) -->
+        <div class="row g-3 module-cards-row align-items-stretch">
           <!-- 1. BỆNH NHÂN -->
           <div class="col-md-6 col-xl-3">
-            <div class="module-card h-100 p-3.5 d-flex flex-column justify-content-between border-top-primary">
+            <div class="module-card module-card-patient">
               <div>
-                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="module-icon-wrap bg-primary-subtle text-primary">
-                      <i class="bi bi-people-fill fs-5"></i>
+                <div class="module-card-head">
+                  <div class="d-flex align-items-center gap-2.5">
+                    <div class="module-icon-box" style="background-color: #eff6ff; color: #2563eb;">
+                      <i class="bi bi-person-heart fs-5"></i>
                     </div>
                     <div>
-                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Bệnh Nhân</h5>
-                      <span class="badge bg-primary-subtle text-primary border border-primary px-1.5 py-0.5" style="font-size: 0.68rem;">Cổng Đặt Lịch</span>
+                      <h5 class="module-title">Phân Hệ Bệnh Nhân</h5>
+                      <span class="module-subtitle-badge badge-blue">Cổng Đặt Lịch Online</span>
                     </div>
                   </div>
                 </div>
-                <div class="module-tasks-list">
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Đặt lịch trực tuyến:</strong> Chọn bác sĩ, chuyên khoa và khung giờ linh hoạt.</div>
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Phiếu hẹn điện tử:</strong> Nhận mã phiếu hẹn kèm mã QR để tiếp đón tức thì.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Tra cứu cá nhân:</strong> Xem lại lịch sử khám bệnh, đơn thuốc và thanh toán.</div>
+                <div class="module-body-list">
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #2563eb;"><i class="bi bi-calendar2-check-fill"></i></div>
+                    <div class="task-text">
+                      <strong>Đặt lịch trực tuyến</strong>
+                      Chọn bác sĩ, chuyên khoa và khung giờ khám linh hoạt.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #2563eb;"><i class="bi bi-qr-code"></i></div>
+                    <div class="task-text">
+                      <strong>Phiếu hẹn điện tử</strong>
+                      Nhận mã phiếu hẹn kèm mã QR để tiếp đón tức thì tại viện.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #2563eb;"><i class="bi bi-journal-medical"></i></div>
+                    <div class="task-text">
+                      <strong>Tra cứu hồ sơ cá nhân</strong>
+                      Xem lịch sử khám bệnh, đơn thuốc và thanh toán viện phí.
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="module-card-footer mt-3 pt-2.5 border-top text-muted small d-flex justify-content-between align-items-center">
-                <span>Đối tượng:</span>
-                <span class="badge bg-light text-slate-700 border">Bệnh nhân / Người nhà</span>
+              <div class="module-card-foot">
+                <span class="foot-label"><i class="bi bi-person-circle me-1"></i>Đối tượng:</span>
+                <span class="foot-badge">Bệnh nhân / Người nhà</span>
               </div>
             </div>
           </div>
 
           <!-- 2. TIẾP ĐÓN & LỄ TÂN -->
           <div class="col-md-6 col-xl-3">
-            <div class="module-card h-100 p-3.5 d-flex flex-column justify-content-between border-top-amber">
+            <div class="module-card module-card-reception">
               <div>
-                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="module-icon-wrap bg-amber-subtle text-amber">
+                <div class="module-card-head">
+                  <div class="d-flex align-items-center gap-2.5">
+                    <div class="module-icon-box" style="background-color: #fffbeb; color: #d97706;">
                       <i class="bi bi-hospital fs-5"></i>
                     </div>
                     <div>
-                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Tiếp Đón</h5>
-                      <span class="badge bg-amber-subtle text-amber border border-warning px-1.5 py-0.5" style="font-size: 0.68rem;">Quầy Lễ Tân</span>
+                      <h5 class="module-title">Phân Hệ Tiếp Đón</h5>
+                      <span class="module-subtitle-badge badge-amber">Quầy Lễ Tân Bệnh Viện</span>
                     </div>
                   </div>
                 </div>
-                <div class="module-tasks-list">
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-amber me-2"></i><strong>Tiếp nhận nhanh:</strong> Quét mã QR trên điện thoại để đối soát thông tin đặt hẹn.</div>
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-amber me-2"></i><strong>Cấp số thứ tự (STT):</strong> Tự động phân luồng vào đúng buồng khám chuyên khoa.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-amber me-2"></i><strong>Điều phối hàng đợi:</strong> Theo dõi sĩ số phòng khám theo thời gian thực.</div>
+                <div class="module-body-list">
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #d97706;"><i class="bi bi-upc-scan"></i></div>
+                    <div class="task-text">
+                      <strong>Tiếp nhận nhanh chóng</strong>
+                      Quét mã QR hoặc CCCD gắn chip đối soát thông tin đặt hẹn.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #d97706;"><i class="bi bi-123"></i></div>
+                    <div class="task-text">
+                      <strong>Cấp số thứ tự (STT)</strong>
+                      Tự động phân luồng bệnh nhân vào đúng buồng khám chuyên khoa.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #d97706;"><i class="bi bi-people"></i></div>
+                    <div class="task-text">
+                      <strong>Điều phối hàng đợi</strong>
+                      Theo dõi sĩ số phòng khám và luồng di chuyển theo thời gian thực.
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="module-card-footer mt-3 pt-2.5 border-top text-muted small d-flex justify-content-between align-items-center">
-                <span>Đối tượng:</span>
-                <span class="badge bg-light text-slate-700 border">Nhân viên tiếp đón</span>
+              <div class="module-card-foot">
+                <span class="foot-label"><i class="bi bi-person-badge me-1"></i>Đối tượng:</span>
+                <span class="foot-badge">Nhân viên tiếp đón</span>
               </div>
             </div>
           </div>
 
           <!-- 3. BÁC SĨ CHUYÊN KHOA -->
           <div class="col-md-6 col-xl-3">
-            <div class="module-card h-100 p-3.5 d-flex flex-column justify-content-between border-top-teal">
+            <div class="module-card module-card-doctor">
               <div>
-                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="module-icon-wrap bg-teal-subtle text-teal">
+                <div class="module-card-head">
+                  <div class="d-flex align-items-center gap-2.5">
+                    <div class="module-icon-box" style="background-color: #f0fdfa; color: #0d9488;">
                       <i class="bi bi-clipboard2-pulse fs-5"></i>
                     </div>
                     <div>
-                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Bác Sĩ</h5>
-                      <span class="badge bg-teal-subtle text-teal border border-teal px-1.5 py-0.5" style="font-size: 0.68rem;">Buồng Khám Bệnh</span>
+                      <h5 class="module-title">Phân Hệ Bác Sĩ</h5>
+                      <span class="module-subtitle-badge badge-teal">Buồng Khám Chuyên Khoa</span>
                     </div>
                   </div>
                 </div>
-                <div class="module-tasks-list">
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-teal me-2"></i><strong>Quản lý ca trực:</strong> Xem danh sách bệnh nhân đang chờ khám theo số thứ tự.</div>
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-teal me-2"></i><strong>Bệnh án điện tử:</strong> Nhập triệu chứng lâm sàng và ghi nhận chẩn đoán.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-teal me-2"></i><strong>Kê đơn thuốc số:</strong> Chọn danh mục thuốc, liều dùng và hướng dẫn điều trị.</div>
+                <div class="module-body-list">
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #0d9488;"><i class="bi bi-calendar-range"></i></div>
+                    <div class="task-text">
+                      <strong>Quản lý ca trực</strong>
+                      Xem danh sách bệnh nhân đang chờ khám theo số thứ tự.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #0d9488;"><i class="bi bi-file-earmark-medical"></i></div>
+                    <div class="task-text">
+                      <strong>Bệnh án điện tử</strong>
+                      Nhập triệu chứng lâm sàng và ghi nhận chẩn đoán bệnh (ICD-10).
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #0d9488;"><i class="bi bi-capsule"></i></div>
+                    <div class="task-text">
+                      <strong>Kê đơn thuốc số</strong>
+                      Chọn danh mục thuốc, liều dùng và hướng dẫn điều trị chi tiết.
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="module-card-footer mt-3 pt-2.5 border-top text-muted small d-flex justify-content-between align-items-center">
-                <span>Đối tượng:</span>
-                <span class="badge bg-light text-slate-700 border">Bác sĩ chuyên khoa</span>
+              <div class="module-card-foot">
+                <span class="foot-label"><i class="bi bi-heart-pulse me-1"></i>Đối tượng:</span>
+                <span class="foot-badge">Bác sĩ chuyên khoa</span>
               </div>
             </div>
           </div>
 
           <!-- 4. QUẢN TRỊ HỆ THỐNG -->
           <div class="col-md-6 col-xl-3">
-            <div class="module-card h-100 p-3.5 d-flex flex-column justify-content-between border-top-purple">
+            <div class="module-card module-card-admin">
               <div>
-                <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="module-icon-wrap bg-purple-subtle text-purple">
+                <div class="module-card-head">
+                  <div class="d-flex align-items-center gap-2.5">
+                    <div class="module-icon-box" style="background-color: #faf5ff; color: #7c3aed;">
                       <i class="bi bi-shield-lock fs-5"></i>
                     </div>
                     <div>
-                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Quản Trị</h5>
-                      <span class="badge bg-purple-subtle text-purple border border-purple px-1.5 py-0.5" style="font-size: 0.68rem;">Admin / Giám Đốc</span>
+                      <h5 class="module-title">Phân Hệ Quản Trị</h5>
+                      <span class="module-subtitle-badge badge-purple">Trung Tâm Điều Hành</span>
                     </div>
                   </div>
                 </div>
-                <div class="module-tasks-list">
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-purple me-2"></i><strong>Quản lý nhân sự:</strong> Cấp tài khoản và phân quyền chặt chẽ theo vai trò.</div>
-                  <div class="small text-slate-700 mb-2.5"><i class="bi bi-check-circle-fill text-purple me-2"></i><strong>Cấu hình phòng khám:</strong> Thiết lập chuyên khoa, buồng khám &amp; lịch làm việc.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-purple me-2"></i><strong>Báo cáo thống kê:</strong> Theo dõi lượt khám, trạng thái xử lý và doanh thu.</div>
+                <div class="module-body-list">
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #7c3aed;"><i class="bi bi-person-gear"></i></div>
+                    <div class="task-text">
+                      <strong>Quản lý nhân sự</strong>
+                      Cấp tài khoản và phân quyền chặt chẽ theo 4 vai trò (RBAC).
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #7c3aed;"><i class="bi bi-sliders"></i></div>
+                    <div class="task-text">
+                      <strong>Cấu hình phòng khám</strong>
+                      Thiết lập danh mục chuyên khoa, buồng khám và lịch làm việc.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #7c3aed;"><i class="bi bi-graph-up-arrow"></i></div>
+                    <div class="task-text">
+                      <strong>Báo cáo thống kê</strong>
+                      Theo dõi lượt khám, trạng thái xử lý và doanh thu viện phí.
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="module-card-footer mt-3 pt-2.5 border-top text-muted small d-flex justify-content-between align-items-center">
-                <span>Đối tượng:</span>
-                <span class="badge bg-light text-slate-700 border">Quản trị viên (Admin)</span>
+              <div class="module-card-foot">
+                <span class="foot-label"><i class="bi bi-shield-check me-1"></i>Đối tượng:</span>
+                <span class="foot-badge">Quản trị viên (Admin)</span>
               </div>
             </div>
           </div>
