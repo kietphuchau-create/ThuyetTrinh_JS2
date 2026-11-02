@@ -461,15 +461,22 @@
       font-weight: 800;
       line-height: 1.3 !important;
       letter-spacing: -0.5px !important;
-      margin-bottom: 1.4rem !important;
+      margin-bottom: 0.75rem !important;
       color: #0f172a;
+    }
+    .slide-01-left-col .cover-description {
+      font-size: clamp(0.88rem, 0.95vw, 0.98rem);
+      line-height: 1.55;
+      color: #475569;
+      margin-bottom: 1.15rem !important;
+      font-weight: 450;
     }
     .slide-01-left-col .teacher-card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
       padding: 0.7rem 1.1rem !important;
-      margin-bottom: 1.25rem !important;
+      margin-bottom: 0 !important;
       font-size: 0.88rem !important;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
@@ -1234,6 +1241,9 @@
     }
     .slide-section#slide-01.active .cover-title {
       animation: slideInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+    }
+    .slide-section#slide-01.active .cover-description {
+      animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
     }
     .slide-section#slide-01.active .rounded-pill.bg-light {
       animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.46s both;
@@ -2245,7 +2255,7 @@
 
 .workflow-steps-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   width: 100%;
 }
@@ -2375,4 +2385,234 @@
   .workflow-steps-grid {
     grid-template-columns: 1fr;
   }
+}
+
+    /* Slide 02: Module Cards & 3-Tier Bar */
+    .module-card {
+      transition: all 0.25s ease;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05);
+    }
+    .module-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+    .module-icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .module-tasks-list .small {
+      font-size: 0.82rem !important;
+      line-height: 1.5 !important;
+    }
+    .arch-3tier-bar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+    .slide-section#slide-02.active .module-card {
+      animation: slideInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .slide-section#slide-02.active .col-md-6:nth-child(1) .module-card { animation-delay: 0.12s; }
+    .slide-section#slide-02.active .col-md-6:nth-child(2) .module-card { animation-delay: 0.22s; }
+    .slide-section#slide-02.active .col-md-6:nth-child(3) .module-card { animation-delay: 0.32s; }
+    .slide-section#slide-02.active .col-md-6:nth-child(4) .module-card { animation-delay: 0.42s; }
+    .slide-section#slide-02.active .arch-3tier-bar {
+      animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+    }
+
+    /* Slide 03: Clinical Business Workflow Styles */
+    .clinical-workflow-board {
+      width: 100%;
+    }
+    .workflow-stage-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 1.05rem;
+      box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .workflow-stage-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+    .workflow-stage-card.card-patient { border-top: 4px solid #2563eb; }
+    .workflow-stage-card.card-reception { border-top: 4px solid #0284c7; }
+    .workflow-stage-card.card-doctor { border-top: 4px solid #d97706; }
+    .workflow-stage-card.card-cashier { border-top: 4px solid #059669; }
+
+    .stage-step-badge {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+    .badge-step-1 { background: #eff6ff; color: #2563eb; }
+    .badge-step-2 { background: #f0f9ff; color: #0284c7; }
+    .badge-step-3 { background: #fffbeb; color: #d97706; }
+    .badge-step-4 { background: #ecfdf5; color: #059669; }
+
+    .stage-status-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+    .stage-status-box.status-booked { background: #eff6ff; border: 1px dashed #bfdbfe; }
+    .stage-status-box.status-booked .status-code { color: #1d4ed8; font-weight: 700; font-family: var(--font-mono, monospace); font-size: 0.78rem; }
+
+    .stage-status-box.status-checkedin { background: #f0f9ff; border: 1px dashed #bae6fd; }
+    .stage-status-box.status-checkedin .status-code { color: #0369a1; font-weight: 700; font-family: var(--font-mono, monospace); font-size: 0.78rem; }
+
+    .stage-status-box.status-inprogress { background: #fffbeb; border: 1px dashed #fde68a; }
+    .stage-status-box.status-inprogress .status-code { color: #b45309; font-weight: 700; font-family: var(--font-mono, monospace); font-size: 0.78rem; }
+
+    .stage-status-box.status-completed { background: #ecfdf5; border: 1px dashed #a7f3d0; }
+    .stage-status-box.status-completed .status-code { color: #047857; font-weight: 700; font-family: var(--font-mono, monospace); font-size: 0.78rem; }
+
+    .stage-action-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .stage-action-item .action-num {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .stage-action-item .action-text strong {
+      color: #1e293b;
+      display: block;
+      font-size: 0.81rem;
+    }
+    .stage-action-item .action-text p {
+      font-size: 0.74rem;
+      line-height: 1.35;
+      margin-top: 1px;
+    }
+
+    .stage-artifact-box {
+      border-radius: 10px;
+      padding: 7px 10px;
+    }
+    .stage-artifact-box.artifact-patient { background: #eff6ff; border: 1px solid #dbeafe; }
+    .stage-artifact-box.artifact-reception { background: #f0f9ff; border: 1px solid #e0f2fe; }
+    .stage-artifact-box.artifact-doctor { background: #fffbeb; border: 1px solid #fef3c7; }
+    .stage-artifact-box.artifact-cashier { background: #ecfdf5; border: 1px solid #d1fae5; }
+
+    .stage-artifact-box .artifact-label {
+      font-size: 0.67rem;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .stage-artifact-box .artifact-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 1px;
+    }
+
+    .workflow-flow-bar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+    .slide-section#slide-03.active .workflow-stage-card {
+      animation: slideInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .slide-section#slide-03.active .col-lg-3:nth-child(1) .workflow-stage-card { animation-delay: 0.1s; }
+    .slide-section#slide-03.active .col-lg-3:nth-child(2) .workflow-stage-card { animation-delay: 0.2s; }
+    .slide-section#slide-03.active .col-lg-3:nth-child(3) .workflow-stage-card { animation-delay: 0.3s; }
+    .slide-section#slide-03.active .col-lg-3:nth-child(4) .workflow-stage-card { animation-delay: 0.4s; }
+    .slide-section#slide-03.active .workflow-flow-bar {
+      animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+    }
+
+/* ============================================================
+   SLIDE 10: TỔNG KẾT ĐỀ TÀI & ĐỊNH HƯỚNG PHÁT TRIỂN
+   ============================================================ */
+.conclusion-panel {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+  padding: 14px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.conclusion-panel:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+}
+.conclusion-panel-strength {
+  border-top: 4px solid #0284c7 !important;
+}
+.conclusion-panel-future {
+  border-top: 4px solid #0d9488 !important;
+}
+.conclusion-item {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+  padding: 9px 12px !important;
+  border-radius: 10px !important;
+  background: #f8fafc !important;
+  border: 1px solid #f1f5f9 !important;
+  transition: all 0.2s ease !important;
+}
+.conclusion-item:hover {
+  background: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  transform: translateX(3px) !important;
+}
+.conclusion-icon-wrap {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+.conclusion-item-title {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  margin-bottom: 2px !important;
+}
+.conclusion-item-desc {
+  font-size: 0.74rem !important;
+  color: #475569 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0 !important;
+}
+.conclusion-footer-bar {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  padding: 8px 16px !important;
 }

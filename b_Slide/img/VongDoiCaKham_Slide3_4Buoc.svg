@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 350" width="100%" height="100%">
+  <defs>
+    <!-- Gradients for Phase Headers -->
+    <linearGradient id="gradP1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="gradP2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="gradP3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <linearGradient id="gradP4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+    <filter id="nodeShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.04" />
+    </filter>
+
+    <!-- Arrow Marker -->
+    <marker id="arrowHead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 1 L 6 4 L 0 7 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <style>
+    .phase-bg { rx: 14px; stroke-width: 1.5; }
+    .phase-title { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 13.5px; font-weight: 700; fill: #ffffff; }
+    .role-text { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #ffffff; opacity: 0.92; }
+    .node-box { rx: 9px; fill: #ffffff; stroke-width: 1; }
+    .node-title { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 700; fill: #1e293b; }
+    .node-desc { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 500; fill: #64748b; }
+    .status-pill { rx: 6px; }
+    .status-text { font-family: 'Fira Code', monospace; font-size: 10.5px; font-weight: 700; }
+    .conn-label { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #64748b; text-anchor: middle; }
+  </style>
+
+  <!-- ==================== GIAI ĐOẠN 1: ĐẶT LỊCH (x=20, w=250) ==================== -->
+  <g transform="translate(20, 15)">
+    <!-- Main Phase Container -->
+    <rect class="phase-bg" x="0" y="0" width="250" height="320" fill="#f8fafc" stroke="#bfdbfe" filter="url(#cardShadow)" />
+    <!-- Header Bar -->
+    <rect x="0" y="0" width="250" height="52" rx="14" fill="url(#gradP1)" />
+    <rect x="0" y="38" width="250" height="14" fill="url(#gradP1)" />
+    <text class="phase-title" x="14" y="25">BƯỚC 1: ĐẶT LỊCH HẸN</text>
+    <text class="role-text" x="14" y="42">👤 Bệnh Nhân (Web / Điện Thoại)</text>
+
+    <!-- Node 1.1 -->
+    <g transform="translate(12, 66)">
+      <rect class="node-box" x="0" y="0" width="226" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#2563eb" />
+      <text class="node-title" x="14" y="24">1. Chọn Chuyên Khoa &amp; Giờ</text>
+      <text class="node-desc" x="14" y="42">• Xem lịch trực của Bác sĩ</text>
+      <text class="node-desc" x="14" y="56">• Chọn ngày khám &amp; khung giờ</text>
+    </g>
+
+    <!-- Connector 1.1 -> 1.2 -->
+    <path d="M 125 132 L 125 152" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrowHead)" />
+
+    <!-- Node 1.2 -->
+    <g transform="translate(12, 156)">
+      <rect class="node-box" x="0" y="0" width="226" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#2563eb" />
+      <text class="node-title" x="14" y="24">2. Sinh Phiếu Hẹn Điện Tử</text>
+      <text class="node-desc" x="14" y="42">• Cấp mã phiếu hẹn duy nhất</text>
+      <text class="node-desc" x="14" y="56">• Nhận mã QR lưu về điện thoại</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 276)">
+      <rect class="status-pill" x="0" y="0" width="226" height="30" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+      <text class="status-text" x="113" y="19" text-anchor="middle" fill="#1d4ed8">STATUS: BOOKED</text>
+    </g>
+  </g>
+
+  <!-- Connection: Phase 1 -> Phase 2 -->
+  <g transform="translate(270, 160)">
+    <line x1="8" y1="0" x2="38" y2="0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowHead)" />
+    <rect x="4" y="-22" width="40" height="16" rx="4" fill="#f1f5f9" />
+    <text class="conn-label" x="24" y="-10">Đến viện</text>
+  </g>
+
+  <!-- ==================== GIAI ĐOẠN 2: TIẾP ĐÓN (x=316, w=250) ==================== -->
+  <g transform="translate(316, 15)">
+    <!-- Main Phase Container -->
+    <rect class="phase-bg" x="0" y="0" width="250" height="320" fill="#f8fafc" stroke="#bae6fd" filter="url(#cardShadow)" />
+    <!-- Header Bar -->
+    <rect x="0" y="0" width="250" height="52" rx="14" fill="url(#gradP2)" />
+    <rect x="0" y="38" width="250" height="14" fill="url(#gradP2)" />
+    <text class="phase-title" x="14" y="25">BƯỚC 2: TIẾP ĐÓN TẠI QUẦY</text>
+    <text class="role-text" x="14" y="42">🏥 Nhân Viên Lễ Tân (Tiếp Nhận)</text>
+
+    <!-- Node 2.1 -->
+    <g transform="translate(12, 66)">
+      <rect class="node-box" x="0" y="0" width="226" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#0284c7" />
+      <text class="node-title" x="14" y="24">1. Quét Mã QR Check-in</text>
+      <text class="node-desc" x="14" y="42">• Quét mã QR trên điện thoại</text>
+      <text class="node-desc" x="14" y="56">• Đối soát thông tin đặt hẹn</text>
+    </g>
+
+    <!-- Connector 2.1 -> 2.2 -->
+    <path d="M 125 132 L 125 152" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrowHead)" />
+
+    <!-- Node 2.2 -->
+    <g transform="translate(12, 156)">
+      <rect class="node-box" x="0" y="0" width="226" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#0284c7" />
+      <text class="node-title" x="14" y="24">2. Cấp Số Thứ Tự (STT)</text>
+      <text class="node-desc" x="14" y="42">• Tự động phân buồng khám</text>
+      <text class="node-desc" x="14" y="56">• Đẩy vào hàng đợi của Bác sĩ</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 276)">
+      <rect class="status-pill" x="0" y="0" width="226" height="30" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1" />
+      <text class="status-text" x="113" y="19" text-anchor="middle" fill="#0369a1">STATUS: CHECKED_IN</text>
+    </g>
+  </g>
+
+  <!-- Connection: Phase 2 -> Phase 3 -->
+  <g transform="translate(566, 160)">
+    <line x1="8" y1="0" x2="38" y2="0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowHead)" />
+    <rect x="2" y="-22" width="44" height="16" rx="4" fill="#f1f5f9" />
+    <text class="conn-label" x="24" y="-10">Vào khám</text>
+  </g>
+
+  <!-- ==================== GIAI ĐOẠN 3: BÁC SĨ KHÁM (x=612, w=250) ==================== -->
+  <g transform="translate(612, 15)">
+    <!-- Main Phase Container -->
+    <rect class="phase-bg" x="0" y="0" width="250" height="320" fill="#f8fafc" stroke="#fde68a" filter="url(#cardShadow)" />
+    <!-- Header Bar -->
+    <rect x="0" y="0" width="250" height="52" rx="14" fill="url(#gradP3)" />
+    <rect x="0" y="38" width="250" height="14" fill="url(#gradP3)" />
+    <text class="phase-title" x="14" y="25">BƯỚC 3: KHÁM &amp; KÊ ĐƠN</text>
+    <text class="role-text" x="14" y="42">🩺 Bác Sĩ Chuyên Khoa</text>
+
+    <!-- Node 3.1 -->
+    <g transform="translate(12, 66)">
+      <rect class="node-box" x="0" y="0" width="226" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#d97706" />
+      <text class="node-title" x="14" y="24">1. Gọi Số &amp; Mở Bệnh Án</text>
+      <text class="node-desc" x="14" y="42">• Gọi STT tiếp theo vào phòng</text>
+      <text class="node-desc" x="14" y="56">• Thăm khám &amp; ghi nhận bệnh án</text>
+    </g>
+
+    <!-- Connector 3.1 -> 3.2 -->
+    <path d="M 125 132 L 125 152" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrowHead)" />
+
+    <!-- Node 3.2 -->
+    <g transform="translate(12, 156)">
+      <rect class="node-box" x="0" y="0" width="226" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#d97706" />
+      <text class="node-title" x="14" y="24">2. Chẩn Đoán &amp; Kê Toa Thuốc</text>
+      <text class="node-desc" x="14" y="42">• Kết luận chẩn đoán lâm sàng</text>
+      <text class="node-desc" x="14" y="56">• Kê đơn thuốc trên phần mềm</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 276)">
+      <rect class="status-pill" x="0" y="0" width="226" height="30" fill="#fffbeb" stroke="#fde68a" stroke-width="1" />
+      <text class="status-text" x="113" y="19" text-anchor="middle" fill="#b45309">STATUS: IN_PROGRESS</text>
+    </g>
+  </g>
+
+  <!-- Connection: Phase 3 -> Phase 4 -->
+  <g transform="translate(862, 160)">
+    <line x1="8" y1="0" x2="38" y2="0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowHead)" />
+    <rect x="2" y="-22" width="44" height="16" rx="4" fill="#f1f5f9" />
+    <text class="conn-label" x="24" y="-10">Kê đơn xong</text>
+  </g>
+
+  <!-- ==================== GIAI ĐOẠN 4: THANH TOÁN (x=908, w=235) ==================== -->
+  <g transform="translate(908, 15)">
+    <!-- Main Phase Container -->
+    <rect class="phase-bg" x="0" y="0" width="235" height="320" fill="#f8fafc" stroke="#a7f3d0" filter="url(#cardShadow)" />
+    <!-- Header Bar -->
+    <rect x="0" y="0" width="235" height="52" rx="14" fill="url(#gradP4)" />
+    <rect x="0" y="38" width="235" height="14" fill="url(#gradP4)" />
+    <text class="phase-title" x="14" y="25">BƯỚC 4: THANH TOÁN</text>
+    <text class="role-text" x="14" y="42">💳 Thu Ngân / Xuất Viện</text>
+
+    <!-- Node 4.1 -->
+    <g transform="translate(12, 66)">
+      <rect class="node-box" x="0" y="0" width="211" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#059669" />
+      <text class="node-title" x="14" y="24">1. Thu Viện Phí &amp; Thuốc</text>
+      <text class="node-desc" x="14" y="42">• Tiền mặt hoặc quét VietQR</text>
+      <text class="node-desc" x="14" y="56">• Áp voucher ưu đãi (nếu có)</text>
+    </g>
+
+    <!-- Connector 4.1 -> 4.2 -->
+    <path d="M 117 132 L 117 152" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrowHead)" />
+
+    <!-- Node 4.2 -->
+    <g transform="translate(12, 156)">
+      <rect class="node-box" x="0" y="0" width="211" height="66" stroke="#e2e8f0" filter="url(#nodeShadow)" />
+      <rect x="0" y="0" width="5" height="66" rx="2" fill="#059669" />
+      <text class="node-title" x="14" y="24">2. In Phiếu &amp; Hoàn Tất</text>
+      <text class="node-desc" x="14" y="42">• In biên lai / hóa đơn</text>
+      <text class="node-desc" x="14" y="56">• Lưu trữ bệnh án &amp; phát thuốc</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(12, 276)">
+      <rect class="status-pill" x="0" y="0" width="211" height="30" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1" />
+      <text class="status-text" x="105" y="19" text-anchor="middle" fill="#047857">STATUS: COMPLETED</text>
+    </g>
+  </g>
+</svg>

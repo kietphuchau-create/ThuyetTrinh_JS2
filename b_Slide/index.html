@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MedSched Pro v1.5.0 | Báo Cáo Đồ Án Capstone</title>
+  <title>MedSched | Hệ Thống Đặt Lịch Khám Bệnh Thông Minh</title>
   <meta name="description" content="Slide web thuyết trình bảo vệ đồ án tốt nghiệp MedSched - Hệ thống y tế thông minh đặt lịch khám và vận hành phòng khám đa cơ sở.">
 
   <!-- Google Fonts: Plus Jakarta Sans, Inter, Fira Code -->
@@ -43,11 +43,16 @@
         <div class="row g-3 g-xl-4 align-items-center w-100 mx-auto justify-content-between my-auto">
           <!-- Cột Trái: Thông tin đề tài, GVHD & Nhóm thực hiện (Bố cục cân đối, liền mạch trang nhã) -->
           <div class="col-lg-5 col-xl-5 text-start d-flex flex-column justify-content-center slide-01-left-col py-1">
-            <!-- Tiêu đề đề tài (Cân đối 2 dòng, không rớt chữ đơn) -->
+            <!-- Tiêu đề đề tài -->
             <h1 class="display-title cover-title">
-              Nền Tảng Đặt Lịch Khám &amp; Vận Hành<br>
-              <span class="hero-gradient">Phòng Khám Đa Cơ Sở Cloud-Native</span>
+              MedSched<br>
+              <span class="hero-gradient">Hệ Thống Đặt Lịch Khám Bệnh Thông Minh</span>
             </h1>
+
+            <!-- Câu mô tả sản phẩm giải quyết vấn đề -->
+            <p class="cover-description">
+              Giải pháp giúp bệnh nhân chủ động đặt lịch khám không phải chờ đợi, đồng thời tối ưu hóa quy trình điều phối và tiếp đón cho phòng khám.
+            </p>
 
             <!-- Khung thông tin GVHD & Nhóm -->
             <div class="teacher-card d-flex flex-column gap-1.5 text-muted">
@@ -59,13 +64,6 @@
                 <i class="bi bi-people-fill text-teal me-2.5 fs-6"></i>
                 <span>Lớp: <strong class="text-slate-800">CD25CT_CLC</strong> — <strong class="text-slate-800">Nhóm 02</strong></span>
               </div>
-            </div>
-
-            <!-- Điểm nhấn công nghệ (Nằm gọn gàng trên 1 hàng ngang cân xứng) -->
-            <div class="d-flex flex-wrap align-items-center gap-2">
-              <span class="tech-badge"><i class="bi bi-cpu text-primary me-1.5"></i>Spring AI Gemini</span>
-              <span class="tech-badge"><i class="bi bi-lock-fill text-teal me-1.5"></i>Atomic CAS Concurrency</span>
-              <span class="tech-badge"><i class="bi bi-database-check text-indigo me-1.5"></i>23 Bảng 3NF</span>
             </div>
           </div>
 
@@ -120,171 +118,173 @@
     </section>
 
     
-    <!-- SLIDE 02: TỔNG QUAN ĐỀ TÀI & LỘ TRÌNH BÁO CÁO -->
-    <!-- SLIDE 02: ĐỘI NGŨ THỰC HIỆN & PHÂN CÔNG NHIỆM VỤ -->
+    <!-- SLIDE 02: CẤU TRÚC DỰ ÁN & CÁC PHÂN HỆ CỐT LÕI -->
     <section class="slide-section" id="slide-02">
-      <div class="content-box d-flex flex-column justify-content-between">
-        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+      <div class="content-box d-flex flex-column justify-content-between h-100">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom flex-shrink-0">
           <div>
-            <h2 class="h4 fw-bold mb-0 text-slate-900">01. Đội Ngũ Phát Triển</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">01. Cấu Trúc Dự Án &amp; Các Phân Hệ Cốt Lõi</h2>
+            <span class="text-muted small">Mô hình hoạt động 4 phân hệ người dùng kết nối qua kiến trúc 3 tầng tiêu chuẩn</span>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
 
-        <div class="row g-3 flex-grow-1 align-content-stretch my-auto py-1">
-          <!-- 1. CHÂU TUẤN KIỆT -->
-          <div class="col-md-4">
-            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-primary">
+        <!-- 4 Phân hệ chính (4 Cột cân đối, trực quan) -->
+        <div class="row g-3 my-auto py-1">
+          <!-- 1. BỆNH NHÂN -->
+          <div class="col-md-6 col-xl-3">
+            <div class="module-card h-100 p-3 d-flex flex-column justify-content-between border-top-primary">
               <div>
-                <div class="d-flex align-items-center gap-3 mb-2.5">
-                  <div class="member-avatar-wrap position-relative">
-                    <img src="./img/avatar_kiet.png?v=2" alt="Châu Tuấn Kiệt" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="avatar-fallback bg-primary-subtle text-primary border border-primary">
-                      <i class="bi bi-person-fill fs-5"></i>
+                <div class="d-flex align-items-center justify-content-between mb-2.5 pb-2 border-bottom">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="module-icon-wrap bg-primary-subtle text-primary">
+                      <i class="bi bi-person-heart fs-5"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Bệnh Nhân</h5>
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-1.5 py-0.5" style="font-size: 0.68rem;">Cổng Đặt Lịch</span>
                     </div>
                   </div>
-                  <div>
-                    <h5 class="fw-bold text-slate-800 mb-0">Châu Tuấn Kiệt</h5>
-                    <span class="badge bg-primary text-white py-0.5 px-2 member-role-badge">Leader / Architect</span>
-                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">506250495</span>
-                  </div>
                 </div>
-                <div class="member-tasks-list">
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-primary me-1.5"></i>Thiết kế kiến trúc Hexagonal (Clean Architecture).</div>
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-primary me-1.5"></i>Chuẩn hóa quy trình Git Flow 6 người &amp; CI/CD.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-primary me-1.5"></i>Tích hợp hệ thống và điều phối tiến độ toàn dự án.</div>
+                <div class="module-tasks-list">
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-primary me-1.5"></i><strong>Đặt lịch trực tuyến:</strong> Chọn bác sĩ, chuyên khoa và khung giờ linh hoạt.</div>
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-primary me-1.5"></i><strong>Phiếu hẹn điện tử:</strong> Nhận mã phiếu hẹn kèm mã QR để tiếp đón tức thì.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-primary me-1.5"></i><strong>Tra cứu cá nhân:</strong> Xem lại lịch sử khám bệnh, đơn thuốc và thanh toán.</div>
                 </div>
+              </div>
+              <div class="module-card-footer mt-2 pt-2 border-top text-muted small d-flex justify-content-between align-items-center">
+                <span>Đối tượng:</span>
+                <span class="badge bg-light text-slate-700 border">Bệnh nhân / Người nhà</span>
               </div>
             </div>
           </div>
 
-          <!-- 2. NGUYỄN THỊ YẾN NHI -->
-          <div class="col-md-4">
-            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-amber">
+          <!-- 2. LỄ TÂN & TIẾP ĐÓN -->
+          <div class="col-md-6 col-xl-3">
+            <div class="module-card h-100 p-3 d-flex flex-column justify-content-between border-top-amber">
               <div>
-                <div class="d-flex align-items-center gap-3 mb-2.5">
-                  <div class="member-avatar-wrap position-relative">
-                    <img src="./img/avatar_nhi.png" alt="Nguyễn Thị Yến Nhi" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="avatar-fallback bg-amber-subtle text-amber border border-warning avatar-fallback-amber">
-                      <i class="bi bi-person-fill fs-5"></i>
+                <div class="d-flex align-items-center justify-content-between mb-2.5 pb-2 border-bottom">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="module-icon-wrap bg-amber-subtle text-amber">
+                      <i class="bi bi-hospital fs-5"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Tiếp Đón</h5>
+                      <span class="badge bg-amber-subtle text-amber border border-warning px-1.5 py-0.5" style="font-size: 0.68rem;">Quầy Lễ Tân</span>
                     </div>
                   </div>
-                  <div>
-                    <h5 class="fw-bold text-slate-800 mb-0">Nguyễn Thị Yến Nhi</h5>
-                    <span class="badge bg-amber text-white py-0.5 px-2 bg-amber-accent member-role-badge">Business Analyst (BA)</span>
-                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250145</span>
-                  </div>
                 </div>
-                <div class="member-tasks-list">
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-amber me-1.5"></i>Đặc tả tài liệu SRS F01–F26 chuẩn IEEE 830.</div>
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-amber me-1.5"></i>Thiết kế Ma trận phân quyền 4 Roles (RBAC).</div>
-                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-amber me-1.5"></i>Xây dựng kịch bản nghiệm thu kiểm thử UAT.</div>
+                <div class="module-tasks-list">
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-amber me-1.5"></i><strong>Tiếp nhận nhanh:</strong> Quét mã QR trên điện thoại để đối soát thông tin đặt hẹn.</div>
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-amber me-1.5"></i><strong>Cấp số thứ tự (STT):</strong> Tự động phân luồng vào đúng buồng khám chuyên khoa.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-amber me-1.5"></i><strong>Điều phối hàng đợi:</strong> Theo dõi sĩ số phòng khám theo thời gian thực.</div>
                 </div>
+              </div>
+              <div class="module-card-footer mt-2 pt-2 border-top text-muted small d-flex justify-content-between align-items-center">
+                <span>Đối tượng:</span>
+                <span class="badge bg-light text-slate-700 border">Nhân viên tiếp đón</span>
               </div>
             </div>
           </div>
 
-          <!-- 3. LÊ THÀNH TÀI -->
-          <div class="col-md-4">
-            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-teal">
+          <!-- 3. BÁC SĨ CHUYÊN KHOA -->
+          <div class="col-md-6 col-xl-3">
+            <div class="module-card h-100 p-3 d-flex flex-column justify-content-between border-top-teal">
               <div>
-                <div class="d-flex align-items-center gap-3 mb-2.5">
-                  <div class="member-avatar-wrap position-relative">
-                    <img src="./img/avatar_tai.png" alt="Lê Thành Tài" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="avatar-fallback bg-teal-subtle text-teal border border-teal avatar-fallback-teal">
-                      <i class="bi bi-person-fill fs-5"></i>
+                <div class="d-flex align-items-center justify-content-between mb-2.5 pb-2 border-bottom">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="module-icon-wrap bg-teal-subtle text-teal">
+                      <i class="bi bi-clipboard2-pulse fs-5"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Bác Sĩ</h5>
+                      <span class="badge bg-teal-subtle text-teal border border-teal px-1.5 py-0.5" style="font-size: 0.68rem;">Buồng Khám Bệnh</span>
                     </div>
                   </div>
-                  <div>
-                    <h5 class="fw-bold text-slate-800 mb-0">Lê Thành Tài</h5>
-                    <span class="badge bg-teal text-white py-0.5 px-2 bg-teal-accent member-role-badge">Database &amp; Persistence</span>
-                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250471</span>
-                  </div>
                 </div>
-                <div class="member-tasks-list">
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-teal me-1.5"></i>Thiết kế CSDL 23 bảng chuẩn hóa bậc 3 (3NF).</div>
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-teal me-1.5"></i>Toàn vẹn ràng buộc khóa ngoại (FK) &amp; Index.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-teal me-1.5"></i>Cài đặt JPA Persistence Adapter &amp; Seed data.</div>
+                <div class="module-tasks-list">
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-teal me-1.5"></i><strong>Quản lý ca trực:</strong> Xem danh sách bệnh nhân đang chờ khám theo số thứ tự.</div>
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-teal me-1.5"></i><strong>Bệnh án điện tử:</strong> Nhập triệu chứng lâm sàng và ghi nhận chẩn đoán.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-teal me-1.5"></i><strong>Kê đơn thuốc số:</strong> Chọn danh mục thuốc, liều dùng và hướng dẫn điều trị.</div>
                 </div>
+              </div>
+              <div class="module-card-footer mt-2 pt-2 border-top text-muted small d-flex justify-content-between align-items-center">
+                <span>Đối tượng:</span>
+                <span class="badge bg-light text-slate-700 border">Bác sĩ chuyên khoa</span>
               </div>
             </div>
           </div>
 
-          <!-- 4. NGUYỄN VĂN HIẾU -->
-          <div class="col-md-4">
-            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-danger">
+          <!-- 4. QUẢN TRỊ HỆ THỐNG -->
+          <div class="col-md-6 col-xl-3">
+            <div class="module-card h-100 p-3 d-flex flex-column justify-content-between border-top-purple">
               <div>
-                <div class="d-flex align-items-center gap-3 mb-2.5">
-                  <div class="member-avatar-wrap position-relative">
-                    <img src="./img/avatar_hieu.png" alt="Nguyễn Văn Hiếu" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="avatar-fallback bg-danger-subtle text-danger border border-danger">
-                      <i class="bi bi-person-fill fs-5"></i>
+                <div class="d-flex align-items-center justify-content-between mb-2.5 pb-2 border-bottom">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="module-icon-wrap bg-purple-subtle text-purple">
+                      <i class="bi bi-shield-lock fs-5"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold text-slate-800 mb-0 fs-6">Phân Hệ Quản Trị</h5>
+                      <span class="badge bg-purple-subtle text-purple border border-purple px-1.5 py-0.5" style="font-size: 0.68rem;">Admin / Giám Đốc</span>
                     </div>
                   </div>
-                  <div>
-                    <h5 class="fw-bold text-slate-800 mb-0">Nguyễn Văn Hiếu</h5>
-                    <span class="badge bg-danger text-white py-0.5 px-2 member-role-badge">Core Backend &amp; Concurrency</span>
-                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250367</span>
-                  </div>
                 </div>
-                <div class="member-tasks-list">
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-danger me-1.5"></i>Lập trình giải thuật Concurrency Atomic CAS.</div>
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-danger me-1.5"></i>Cơ chế bảo mật JWT Single Session (1 phiên).</div>
-                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-danger me-1.5"></i>Xây dựng toàn bộ các Use Case nghiệp vụ lõi.</div>
+                <div class="module-tasks-list">
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-purple me-1.5"></i><strong>Quản lý nhân sự:</strong> Cấp tài khoản và phân quyền chặt chẽ theo vai trò.</div>
+                  <div class="small text-slate-700 mb-1.5"><i class="bi bi-check-circle-fill text-purple me-1.5"></i><strong>Cấu hình phòng khám:</strong> Thiết lập chuyên khoa, buồng khám &amp; lịch làm việc.</div>
+                  <div class="small text-slate-700"><i class="bi bi-check-circle-fill text-purple me-1.5"></i><strong>Báo cáo thống kê:</strong> Theo dõi lượt khám, trạng thái xử lý và doanh thu.</div>
                 </div>
+              </div>
+              <div class="module-card-footer mt-2 pt-2 border-top text-muted small d-flex justify-content-between align-items-center">
+                <span>Đối tượng:</span>
+                <span class="badge bg-light text-slate-700 border">Quản trị viên (Admin)</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- 5. HUỲNH THỊ KIM TRANG -->
-          <div class="col-md-4">
-            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-purple">
-              <div>
-                <div class="d-flex align-items-center gap-3 mb-2.5">
-                  <div class="member-avatar-wrap position-relative">
-                    <img src="./img/avatar_trang.png" alt="Huỳnh Thị Kim Trang" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="avatar-fallback bg-purple-subtle text-purple border border-purple avatar-fallback-purple">
-                      <i class="bi bi-person-fill fs-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <h5 class="fw-bold text-slate-800 mb-0">Huỳnh Thị Kim Trang</h5>
-                    <span class="badge text-white py-0.5 px-2 bg-purple-accent member-role-badge">Frontend Developer</span>
-                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250114</span>
-                  </div>
-                </div>
-                <div class="member-tasks-list">
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-purple me-1.5"></i>Xây dựng toàn bộ 22 màn hình Next.js 15.</div>
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-purple me-1.5"></i>Tối ưu 100% Responsive Desktop/Tablet/Mobile.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-purple me-1.5"></i>Tích hợp máy quét Camera QR tiếp đón 1 giây.</div>
-                </div>
-              </div>
+        <!-- Khung Kiến Trúc 3 Tầng Bên Dưới (3-Tier Standard Architecture) -->
+        <div class="arch-3tier-bar p-2.5 rounded-3 border bg-light d-flex align-items-center justify-content-between flex-shrink-0 mt-1">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-dark text-white px-2 py-1"><i class="bi bi-layers-fill me-1"></i>Kiến Trúc 3 Tầng</span>
+          </div>
+
+          <!-- Tầng 1: Presentation -->
+          <div class="tier-pill d-flex align-items-center gap-2 bg-white px-3 py-1.5 rounded-pill border shadow-sm">
+            <div class="tier-icon bg-info-subtle text-info rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+              <i class="bi bi-browser-chrome fs-6"></i>
+            </div>
+            <div>
+              <div class="fw-bold text-slate-800" style="font-size: 0.82rem;">Tầng Giao Diện (Client)</div>
+              <div class="text-muted" style="font-size: 0.72rem;">Next.js / React • Web Portal &amp; Responsive Mobile</div>
             </div>
           </div>
 
-          <!-- 6. TRẦN NHẬT TÂN -->
-          <div class="col-md-4">
-            <div class="member-card h-100 p-3 d-flex flex-column justify-content-between border-top-success">
-              <div>
-                <div class="d-flex align-items-center gap-3 mb-2.5">
-                  <div class="member-avatar-wrap position-relative">
-                    <img src="./img/avatar_tan.png" alt="Trần Nhật Tân" class="member-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="avatar-fallback bg-success-subtle text-success border border-success avatar-fallback-success">
-                      <i class="bi bi-person-fill fs-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <h5 class="fw-bold text-slate-800 mb-0">Trần Nhật Tân</h5>
-                    <span class="badge bg-success text-white py-0.5 px-2 member-role-badge">AI Engineer &amp; Live Demo</span>
-                    <span class="font-monospace text-muted small ms-1 member-mssv-badge">501250392</span>
-                  </div>
-                </div>
-                <div class="member-tasks-list">
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-success me-1.5"></i>Tích hợp Spring AI ChatClient (Gemini 2.5).</div>
-                  <div class="small text-slate-700 mb-1"><i class="bi bi-check2-circle text-success me-1.5"></i>Kiểm thử tự động hệ thống bộ 160 bài test.</div>
-                  <div class="small text-slate-700"><i class="bi bi-check2-circle text-success me-1.5"></i>Xây dựng &amp; điều phối kịch bản Live Demo.</div>
-                </div>
-              </div>
+          <i class="bi bi-arrow-right text-muted fs-5"></i>
+
+          <!-- Tầng 2: Application / API -->
+          <div class="tier-pill d-flex align-items-center gap-2 bg-white px-3 py-1.5 rounded-pill border shadow-sm">
+            <div class="tier-icon bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+              <i class="bi bi-gear-wide-connected fs-6"></i>
+            </div>
+            <div>
+              <div class="fw-bold text-slate-800" style="font-size: 0.82rem;">Tầng Nghiệp Vụ (Backend)</div>
+              <div class="text-muted" style="font-size: 0.72rem;">Java Spring Boot • RESTful API &amp; Xác thực người dùng</div>
+            </div>
+          </div>
+
+          <i class="bi bi-arrow-right text-muted fs-5"></i>
+
+          <!-- Tầng 3: Database -->
+          <div class="tier-pill d-flex align-items-center gap-2 bg-white px-3 py-1.5 rounded-pill border shadow-sm">
+            <div class="tier-icon bg-warning-subtle text-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">
+              <i class="bi bi-database-fill fs-6"></i>
+            </div>
+            <div>
+              <div class="fw-bold text-slate-800" style="font-size: 0.82rem;">Tầng Dữ Liệu (Database)</div>
+              <div class="text-muted" style="font-size: 0.72rem;">MySQL • Quản lý Lịch hẹn, Bệnh án &amp; Toàn vẹn dữ liệu</div>
             </div>
           </div>
         </div>
@@ -293,103 +293,252 @@
 
 
     <section class="slide-section" id="slide-03">
-      <div class="content-box d-flex flex-column justify-content-between">
-        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
-          <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">02. Nghiệp Vụ 1 Ca Khám Hoàn Chỉnh</h2>
+      <div class="content-box d-flex flex-column justify-content-between h-100">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom flex-shrink-0">
+          <div>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">02. Luồng Nghiệp Vụ 1 Ca Khám Hoàn Chỉnh</h2>
+            <span class="text-muted small">Quy trình vận hành 4 giai đoạn khép kín từ lúc đặt lịch hẹn đến khi hoàn tất xuất viện</span>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
 
-        <div class="workflow-section-wrap">
-          <div class="workflow-diagram-frame diagram-img-frame" title="Click để phóng to sơ đồ">
-            <img src="./img/VongDoiCaKham_Slide2.png" alt="Vòng đời ca khám 5 bước" class="workflow-diagram-img diagram-img">
+        <!-- Khung Luồng Nghiệp Vụ Chính (4 Cột Giai Đoạn Tuyến Tính) -->
+        <div class="clinical-workflow-board flex-grow-1 d-flex flex-column justify-content-between my-auto py-1">
+          <div class="row g-3 align-items-stretch">
+            
+            <!-- GIAI ĐOẠN 1: BỆNH NHÂN ĐẶT LỊCH -->
+            <div class="col-lg-3 col-md-6 d-flex">
+              <div class="workflow-stage-card card-patient w-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="stage-card-top border-bottom pb-2 mb-2">
+                    <div class="d-flex align-items-center justify-content-between mb-1.5">
+                      <span class="stage-step-badge badge-step-1">GIAI ĐOẠN 01</span>
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-0.5" style="font-size: 0.7rem;">
+                        <i class="bi bi-person-fill me-1"></i>Bệnh Nhân
+                      </span>
+                    </div>
+                    <h5 class="fw-bold text-slate-900 mb-0 fs-6">1. Đặt Lịch Trực Tuyến</h5>
+                    <span class="text-muted" style="font-size: 0.74rem;">Cổng thông tin Web / Mobile</span>
+                  </div>
+
+                  <div class="stage-status-box status-booked mb-2.5">
+                    <span class="status-label text-muted" style="font-size: 0.74rem;">Trạng thái hệ thống:</span>
+                    <span class="status-code">BOOKED</span>
+                  </div>
+
+                  <div class="stage-action-list">
+                    <div class="stage-action-item">
+                      <div class="action-num">1</div>
+                      <div class="action-text">
+                        <strong>Chọn Bác sĩ &amp; Khung giờ:</strong>
+                        <p class="mb-0 text-muted">Tra cứu chuyên khoa, chọn ngày khám và giờ còn trống.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">2</div>
+                      <div class="action-text">
+                        <strong>Khai báo thông tin cá nhân:</strong>
+                        <p class="mb-0 text-muted">Điền họ tên, số điện thoại &amp; triệu chứng bệnh ban đầu.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">3</div>
+                      <div class="action-text">
+                        <strong>Xác nhận phiếu hẹn:</strong>
+                        <p class="mb-0 text-muted">Hệ thống tạo mã lịch hẹn duy nhất và sinh mã QR lưu về máy.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-artifact-box artifact-patient mt-2.5">
+                  <div class="artifact-label"><i class="bi bi-qr-code me-1"></i>Kết quả đầu ra:</div>
+                  <div class="artifact-title">Phiếu Hẹn Điện Tử + Mã QR</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GIAI ĐOẠN 2: LỄ TÂN TIẾP ĐÓN -->
+            <div class="col-lg-3 col-md-6 d-flex">
+              <div class="workflow-stage-card card-reception w-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="stage-card-top border-bottom pb-2 mb-2">
+                    <div class="d-flex align-items-center justify-content-between mb-1.5">
+                      <span class="stage-step-badge badge-step-2">GIAI ĐOẠN 02</span>
+                      <span class="badge bg-info-subtle text-info border border-info-subtle px-2 py-0.5" style="font-size: 0.7rem;">
+                        <i class="bi bi-hospital me-1"></i>Lễ Tân
+                      </span>
+                    </div>
+                    <h5 class="fw-bold text-slate-900 mb-0 fs-6">2. Tiếp Đón &amp; Cấp STT</h5>
+                    <span class="text-muted" style="font-size: 0.74rem;">Tại quầy tiếp nhận phòng khám</span>
+                  </div>
+
+                  <div class="stage-status-box status-checkedin mb-2.5">
+                    <span class="status-label text-muted" style="font-size: 0.74rem;">Trạng thái hệ thống:</span>
+                    <span class="status-code">CHECKED_IN</span>
+                  </div>
+
+                  <div class="stage-action-list">
+                    <div class="stage-action-item">
+                      <div class="action-num">1</div>
+                      <div class="action-text">
+                        <strong>Quét mã QR check-in:</strong>
+                        <p class="mb-0 text-muted">Lễ tân dùng camera quét mã QR trên điện thoại bệnh nhân.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">2</div>
+                      <div class="action-text">
+                        <strong>Đối soát thông tin:</strong>
+                        <p class="mb-0 text-muted">Kiểm tra thông tin đặt hẹn và xác nhận bệnh nhân đã tới.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">3</div>
+                      <div class="action-text">
+                        <strong>Cấp số thứ tự (STT):</strong>
+                        <p class="mb-0 text-muted">Hệ thống cấp STT và tự động đẩy vào hàng đợi của Bác sĩ.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-artifact-box artifact-reception mt-2.5">
+                  <div class="artifact-label"><i class="bi bi-ticket-perforated me-1"></i>Kết quả đầu ra:</div>
+                  <div class="artifact-title">Số Thứ Tự &amp; Buồng Khám Chỉ Định</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GIAI ĐOẠN 3: BÁC SĨ KHÁM & KÊ ĐƠN -->
+            <div class="col-lg-3 col-md-6 d-flex">
+              <div class="workflow-stage-card card-doctor w-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="stage-card-top border-bottom pb-2 mb-2">
+                    <div class="d-flex align-items-center justify-content-between mb-1.5">
+                      <span class="stage-step-badge badge-step-3">GIAI ĐOẠN 03</span>
+                      <span class="badge bg-warning-subtle text-amber border border-warning-subtle px-2 py-0.5" style="font-size: 0.7rem;">
+                        <i class="bi bi-heart-pulse-fill me-1"></i>Bác Sĩ
+                      </span>
+                    </div>
+                    <h5 class="fw-bold text-slate-900 mb-0 fs-6">3. Khám Bệnh &amp; Kê Đơn</h5>
+                    <span class="text-muted" style="font-size: 0.74rem;">Tại buồng khám chuyên khoa</span>
+                  </div>
+
+                  <div class="stage-status-box status-inprogress mb-2.5">
+                    <span class="status-label text-muted" style="font-size: 0.74rem;">Trạng thái hệ thống:</span>
+                    <span class="status-code">IN_PROGRESS</span>
+                  </div>
+
+                  <div class="stage-action-list">
+                    <div class="stage-action-item">
+                      <div class="action-num">1</div>
+                      <div class="action-text">
+                        <strong>Gọi số thứ tự vào buồng:</strong>
+                        <p class="mb-0 text-muted">Bác sĩ xem hàng đợi ca trực và bấm gọi bệnh nhân tiếp theo.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">2</div>
+                      <div class="action-text">
+                        <strong>Khám lâm sàng &amp; chẩn đoán:</strong>
+                        <p class="mb-0 text-muted">Thăm khám thực tế, ghi nhận kết quả vào bệnh án điện tử.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">3</div>
+                      <div class="action-text">
+                        <strong>Kê đơn thuốc điện tử:</strong>
+                        <p class="mb-0 text-muted">Chọn thuốc, kê liều dùng và chuyển đơn sang quầy thanh toán.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-artifact-box artifact-doctor mt-2.5">
+                  <div class="artifact-label"><i class="bi bi-file-earmark-medical me-1"></i>Kết quả đầu ra:</div>
+                  <div class="artifact-title">Bệnh Án Điện Tử &amp; Đơn Thuốc Số</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- GIAI ĐOẠN 4: THU NGÂN THANH TOÁN -->
+            <div class="col-lg-3 col-md-6 d-flex">
+              <div class="workflow-stage-card card-cashier w-100 d-flex flex-column justify-content-between">
+                <div>
+                  <div class="stage-card-top border-bottom pb-2 mb-2">
+                    <div class="d-flex align-items-center justify-content-between mb-1.5">
+                      <span class="stage-step-badge badge-step-4">GIAI ĐOẠN 04</span>
+                      <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-0.5" style="font-size: 0.7rem;">
+                        <i class="bi bi-cash-stack me-1"></i>Thu Ngân
+                      </span>
+                    </div>
+                    <h5 class="fw-bold text-slate-900 mb-0 fs-6">4. Thanh Toán &amp; Xuất Viện</h5>
+                    <span class="text-muted" style="font-size: 0.74rem;">Tại quầy thu ngân &amp; nhà thuốc</span>
+                  </div>
+
+                  <div class="stage-status-box status-completed mb-2.5">
+                    <span class="status-label text-muted" style="font-size: 0.74rem;">Trạng thái hệ thống:</span>
+                    <span class="status-code">COMPLETED</span>
+                  </div>
+
+                  <div class="stage-action-list">
+                    <div class="stage-action-item">
+                      <div class="action-num">1</div>
+                      <div class="action-text">
+                        <strong>Tính toán tổng viện phí:</strong>
+                        <p class="mb-0 text-muted">Hệ thống tự động cộng tiền khám và tiền thuốc trong đơn.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">2</div>
+                      <div class="action-text">
+                        <strong>Thanh toán linh hoạt:</strong>
+                        <p class="mb-0 text-muted">Bệnh nhân thanh toán bằng Tiền mặt hoặc Quét mã VietQR.</p>
+                      </div>
+                    </div>
+                    <div class="stage-action-item">
+                      <div class="action-num">3</div>
+                      <div class="action-text">
+                        <strong>In hóa đơn &amp; phát thuốc:</strong>
+                        <p class="mb-0 text-muted">In biên lai thanh toán, bàn giao thuốc và hoàn tất ca khám.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-artifact-box artifact-cashier mt-2.5">
+                  <div class="artifact-label"><i class="bi bi-receipt me-1"></i>Kết quả đầu ra:</div>
+                  <div class="artifact-title">Hóa Đơn Viện Phí &amp; Hoàn Tất Khám</div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="workflow-steps-grid">
-            <!-- BƯỚC 1: BỆNH NHÂN -->
-            <div class="workflow-step-card step-patient">
-              <div class="step-card-header">
-                <span class="step-index-pill">BƯỚC 01</span>
-                <span class="step-role-badge badge-patient"><i class="bi bi-person-fill"></i> Bệnh Nhân</span>
-              </div>
-              <h6 class="step-card-title">Đặt Lịch Trực Tuyến</h6>
-              <ul class="step-feature-list">
-                <li><i class="bi bi-check2 text-primary"></i><span><strong>Spring AI:</strong> Phân khoa Gemini</span></li>
-                <li><i class="bi bi-check2 text-primary"></i><span><strong>Atomic CAS:</strong> Khóa slot 0% trùng</span></li>
-                <li><i class="bi bi-check2 text-primary"></i><span><strong>VietQR:</strong> Cọc giữ chỗ sinh mã QR</span></li>
-              </ul>
-              <div class="step-card-footer">
-                <span class="step-status-chip">Trạng thái: <code>BOOKED</code></span>
-              </div>
+          <!-- Dải Tiến Trình Liên Kết Bên Dưới (Workflow Continuity Pipeline) -->
+          <div class="workflow-flow-bar mt-2.5 p-2 rounded-3 bg-white border d-flex align-items-center justify-content-between shadow-sm flex-shrink-0">
+            <div class="flow-pill text-primary fw-bold small d-flex align-items-center gap-1.5" style="font-size: 0.8rem;">
+              <i class="bi bi-1-circle-fill"></i> Đặt lịch trực tuyến
             </div>
-
-            <!-- BƯỚC 2: LỄ TÂN -->
-            <div class="workflow-step-card step-reception">
-              <div class="step-card-header">
-                <span class="step-index-pill">BƯỚC 02</span>
-                <span class="step-role-badge badge-reception"><i class="bi bi-qr-code-scan"></i> Lễ Tân</span>
-              </div>
-              <h6 class="step-card-title">Tiếp Đón &amp; Cấp STT</h6>
-              <ul class="step-feature-list">
-                <li><i class="bi bi-check2 text-info"></i><span><strong>Camera QR:</strong> Check-in quét mã &lt; 2s</span></li>
-                <li><i class="bi bi-check2 text-info"></i><span><strong>Cấp STT:</strong> Đẩy vào hàng đợi buồng</span></li>
-                <li><i class="bi bi-check2 text-info"></i><span><strong>Realtime:</strong> Thông báo tới Bác sĩ</span></li>
-              </ul>
-              <div class="step-card-footer">
-                <span class="step-status-chip">Trạng thái: <code>CHECKED_IN</code></span>
-              </div>
+            <div class="flow-connector text-muted small d-flex align-items-center gap-1" style="font-size: 0.74rem;">
+              <span>Đến phòng khám</span> <i class="bi bi-arrow-right-short fs-5 text-primary"></i>
             </div>
-
-            <!-- BƯỚC 3: BÁC SĨ -->
-            <div class="workflow-step-card step-doctor">
-              <div class="step-card-header">
-                <span class="step-index-pill">BƯỚC 03</span>
-                <span class="step-role-badge badge-doctor"><i class="bi bi-heart-pulse-fill"></i> Bác Sĩ</span>
-              </div>
-              <h6 class="step-card-title">Khám &amp; Kê Đơn EHR</h6>
-              <ul class="step-feature-list">
-                <li><i class="bi bi-check2 text-warning"></i><span><strong>Bệnh án EHR:</strong> Lịch sử y khoa</span></li>
-                <li><i class="bi bi-check2 text-warning"></i><span><strong>Mã ICD-10:</strong> Gợi ý chẩn đoán chuẩn</span></li>
-                <li><i class="bi bi-check2 text-warning"></i><span><strong>Đơn thuốc số:</strong> Chuyển sang dược</span></li>
-              </ul>
-              <div class="step-card-footer">
-                <span class="step-status-chip">Trạng thái: <code>IN_PROGRESS</code></span>
-              </div>
+            <div class="flow-pill text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 0.8rem;">
+              <i class="bi bi-2-circle-fill"></i> Quét QR &amp; Cấp STT
             </div>
-
-            <!-- BƯỚC 4: THU NGÂN -->
-            <div class="workflow-step-card step-cashier">
-              <div class="step-card-header">
-                <span class="step-index-pill">BƯỚC 04</span>
-                <span class="step-role-badge badge-cashier"><i class="bi bi-cash-stack"></i> Thu Ngân</span>
-              </div>
-              <h6 class="step-card-title">Viện Phí &amp; Xuất Viện</h6>
-              <ul class="step-feature-list">
-                <li><i class="bi bi-check2 text-success"></i><span><strong>Voucher:</strong> Tự động trừ khuyến mãi</span></li>
-                <li><i class="bi bi-check2 text-success"></i><span><strong>PayOS Webhook:</strong> Gạch nợ tức thì</span></li>
-                <li><i class="bi bi-check2 text-success"></i><span><strong>Hóa đơn điện tử:</strong> Xuất viện nhanh</span></li>
-              </ul>
-              <div class="step-card-footer">
-                <span class="step-status-chip">Trạng thái: <code>COMPLETED</code></span>
-              </div>
+            <div class="flow-connector text-muted small d-flex align-items-center gap-1" style="font-size: 0.74rem;">
+              <span>Mời vào buồng</span> <i class="bi bi-arrow-right-short fs-5 text-info"></i>
             </div>
-
-            <!-- BƯỚC 5: GIÁM ĐỐC -->
-            <div class="workflow-step-card step-admin">
-              <div class="step-card-header">
-                <span class="step-index-pill">BƯỚC 05</span>
-                <span class="step-role-badge badge-admin"><i class="bi bi-graph-up-arrow"></i> Ban Giám Đốc</span>
-              </div>
-              <h6 class="step-card-title">Giám Sát Realtime</h6>
-              <ul class="step-feature-list">
-                <li><i class="bi bi-check2 text-purple"></i><span><strong>BI Dashboard:</strong> Doanh thu tức thì</span></li>
-                <li><i class="bi bi-check2 text-purple"></i><span><strong>Tải buồng khám:</strong> Cảnh báo nghẽn</span></li>
-                <li><i class="bi bi-check2 text-purple"></i><span><strong>SRE Monitoring:</strong> Đo SLA 99.9%</span></li>
-              </ul>
-              <div class="step-card-footer">
-                <span class="step-status-chip">Phạm vi: <code>TOÀN VIỆN</code></span>
-              </div>
+            <div class="flow-pill text-amber fw-bold small d-flex align-items-center gap-1.5" style="font-size: 0.8rem;">
+              <i class="bi bi-3-circle-fill"></i> Khám bệnh &amp; Kê đơn
+            </div>
+            <div class="flow-connector text-muted small d-flex align-items-center gap-1" style="font-size: 0.74rem;">
+              <span>Chuyển đơn thuốc</span> <i class="bi bi-arrow-right-short fs-5 text-amber"></i>
+            </div>
+            <div class="flow-pill text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 0.8rem;">
+              <i class="bi bi-4-circle-fill"></i> Thanh toán &amp; Nhận thuốc
             </div>
           </div>
         </div>
@@ -411,7 +560,7 @@
         <div class="diagram-slide-body row g-3 align-items-center justify-content-center my-auto">
           <div class="col-12 d-flex justify-content-center">
             <div class="archify-frame-container">
-              <iframe src="./medsched_archify_architecture.html?embed=true" title="Sơ đồ Kiến trúc Tổng thể Hệ thống MedSched Pro" class="archify-iframe" loading="lazy"></iframe>
+              <iframe src="./medsched_archify_architecture.html?embed=true&v=2" title="Sơ đồ Kiến trúc Tổng thể Hệ thống MedSched Pro" class="archify-iframe" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -457,13 +606,13 @@
       <div class="content-box d-flex flex-column justify-content-between">
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">05. Mô Hình CSDL 23 Bảng Chuẩn 3NF (Trích Xuất DBeaver)</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">05. Thiết Kế Cơ Sở Dữ Liệu Quan Hệ (Chuẩn 3NF - MySQL)</h2>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
 
         <div class="diagram-slide-body row g-3 align-items-center my-auto">
-          <!-- Cột Trái: Window Mockup khung CSDL chuyên nghiệp -->
+          <!-- Cột Trái: Window Mockup khung CSDL trực quan -->
           <div class="col-lg-5 col-xl-5 d-flex justify-content-center">
             <div class="diagram-img-frame diagram-frame-db" title="Click để phóng to toàn màn hình">
               <div class="db-mockup-header">
@@ -472,56 +621,57 @@
                   <span class="db-mockup-dot db-dot-yellow"></span>
                   <span class="db-mockup-dot db-dot-green"></span>
                 </div>
-                <span class="db-mockup-title">DBeaver ERD • MySQL 8.0</span>
-                <span class="db-mockup-badge"><i class="bi bi-zoom-in me-1"></i>Zoom ERD</span>
+                <span class="db-mockup-title">ERD Schema • MySQL 8.0</span>
+                <span class="db-mockup-badge"><i class="bi bi-diagram-3 me-1"></i>ERD DBeaver</span>
               </div>
               <div class="db-mockup-body">
-                <img src="./img/medsched_db.png" alt="Sơ đồ 23 bảng CSDL MedSched" class="diagram-img diagram-img-db">
+                <img src="./img/medsched_db.png" alt="Sơ đồ CSDL MedSched" class="diagram-img diagram-img-db">
                 <div class="db-zoom-floating-hint"><i class="bi bi-arrows-fullscreen"></i> Phóng to</div>
               </div>
             </div>
           </div>
 
-          <!-- Cột Phải: 3 Thẻ cô đọng, cân đối, chống tràn tuyệt đối -->
+          <!-- Cột Phải: 3 Thẻ nhóm nghiệp vụ rõ ràng, an toàn, dễ trình bày -->
           <div class="col-lg-7 col-xl-7 slide-06-cards-col">
-            <!-- Thẻ 1: 17 Bảng Nghiệp Vụ Lâm Sàng -->
+            <!-- Thẻ 1: Khám Chữa Bệnh Cốt Lõi -->
             <div class="key-point-card db-card-compact border-left-blue">
               <div class="db-card-header">
-                <span class="badge bg-primary text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-hospital me-1"></i>Nghiệp Vụ Lâm Sàng</span>
-                <span class="badge bg-primary-subtle text-primary fw-bold font-monospace px-2 py-0.5 card-badge-sm">17 / 23 Bảng</span>
+                <span class="badge bg-primary text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-hospital me-1"></i>Khám Chữa Bệnh</span>
+                <span class="badge bg-primary-subtle text-primary fw-bold font-monospace px-2 py-0.5 card-badge-sm">Nghiệp Vụ Cốt Lõi</span>
               </div>
-              <h6 class="db-card-title">17 Bảng Vận Hành Quy Trình Y Tế Cốt Lõi</h6>
+              <h6 class="db-card-title">Quản Lý Chuyên Khoa, Lịch Khám &amp; Hồ Sơ Bệnh Án</h6>
               <div class="db-card-body">
-                <div class="db-card-line"><strong>• Quản trị &amp; Phân quyền:</strong> <code class="db-table-chip">users</code>, <code class="db-table-chip">patient_profiles</code>, <code class="db-table-chip">medical_centers</code>, <code class="db-table-chip">roles</code> (Đa cơ sở, 4 Roles RBAC).</div>
-                <div class="db-card-line"><strong>• Lịch khám &amp; CAS:</strong> <code class="db-table-chip">doctors</code>, <code class="db-table-chip">specialties</code>, <code class="db-table-chip">doctor_schedules</code>, <code class="db-table-chip">time_slots</code> (Khóa slot nguyên tử chống trùng).</div>
-                <div class="db-card-line"><strong>• Hồ sơ &amp; Viện phí:</strong> <code class="db-table-chip">appointments</code>, <code class="db-table-chip">medical_records</code> (ICD-10), <code class="db-table-chip">medicines</code>, <code class="db-table-chip">prescriptions</code>, <code class="db-table-chip">invoices</code>, <code class="db-table-chip">payments</code>.</div>
+                <div class="db-card-line"><strong>• Bác sĩ &amp; Khung giờ:</strong> <code class="db-table-chip">specialties</code>, <code class="db-table-chip">doctors</code>, <code class="db-table-chip">doctor_schedules</code>, <code class="db-table-chip">time_slots</code> (Quản lý bác sĩ, ca trực và các khung giờ khám).</div>
+                <div class="db-card-line"><strong>• Lịch hẹn khám:</strong> <code class="db-table-chip">appointments</code>, <code class="db-table-chip">appointment_status_logs</code> (Lưu trữ và theo dõi tiến trình ca khám).</div>
+                <div class="db-card-line"><strong>• Bệnh án &amp; Đơn thuốc:</strong> <code class="db-table-chip">medical_records</code>, <code class="db-table-chip">medicines</code>, <code class="db-table-chip">prescriptions</code>, <code class="db-table-chip">prescription_items</code> (Chẩn đoán, kê đơn thuốc).</div>
               </div>
             </div>
 
-            <!-- Thẻ 2: 6 Bảng Hạ Tầng Kỹ Thuật & Bảo Mật -->
+            <!-- Thẻ 2: Quản Trị Hệ Thống & Viện Phí -->
             <div class="key-point-card db-card-compact border-left-teal">
               <div class="db-card-header">
-                <span class="badge text-white py-0.5 px-2 bg-teal-accent card-badge-sm"><i class="bi bi-shield-lock me-1"></i>Hạ Tầng Kỹ Thuật &amp; Bảo Mật</span>
-                <span class="badge bg-teal-subtle text-teal fw-bold font-monospace px-2 py-0.5 card-badge-sm">6 / 23 Bảng</span>
+                <span class="badge text-white py-0.5 px-2 bg-teal-accent card-badge-sm"><i class="bi bi-person-badge me-1"></i>Quản Trị &amp; Viện Phí</span>
+                <span class="badge bg-teal-subtle text-teal fw-bold font-monospace px-2 py-0.5 card-badge-sm">Vận Hành &amp; Thanh Toán</span>
               </div>
-              <h6 class="db-card-title">6 Bảng Phụ Trợ Single Session JWT, Voucher &amp; Cấu Hình</h6>
+              <h6 class="db-card-title">Người Dùng, Phân Quyền &amp; Hóa Đơn Dịch Vụ</h6>
               <div class="db-card-body">
-                <div class="db-card-line"><strong>• JWT Single Session:</strong> <code class="db-table-chip">revoked_tokens</code> (Blacklist token tức thì khi đăng nhập máy mới, triệt tiêu chiếm phiên).</div>
-                <div class="db-card-line"><strong>• Khôi phục tài khoản:</strong> <code class="db-table-chip">password_reset_tokens</code> (Token OTP mã hóa, tự hủy sau 15 phút).</div>
-                <div class="db-card-line"><strong>• Tiện ích hệ thống:</strong> <code class="db-table-chip">promotions</code> (Voucher viện phí), <code class="db-table-chip">system_settings</code>, <code class="db-table-chip">doctor_reviews</code>, <code class="db-table-chip">dev_mode_sessions</code>.</div>
+                <div class="db-card-line"><strong>• Người dùng &amp; Phân quyền:</strong> <code class="db-table-chip">users</code>, <code class="db-table-chip">patient_profiles</code>, <code class="db-table-chip">medical_centers</code>, <code class="db-table-chip">user_medical_center_roles</code> (Quản lý tài khoản, hồ sơ người bệnh và vai trò).</div>
+                <div class="db-card-line"><strong>• Hóa đơn &amp; Thanh toán:</strong> <code class="db-table-chip">invoices</code>, <code class="db-table-chip">payments</code> (Xuất viện phí, lưu lịch sử giao dịch rõ ràng, minh bạch).</div>
+                <div class="db-card-line"><strong>• Tiện ích hỗ trợ:</strong> <code class="db-table-chip">promotions</code>, <code class="db-table-chip">doctor_reviews</code>, <code class="db-table-chip">system_settings</code> (Ưu đãi dịch vụ, đánh giá bác sĩ và cấu hình hệ thống).</div>
               </div>
             </div>
 
-            <!-- Thẻ 3: Quy Hoạch Chuẩn 3NF & Tối Ưu Hóa Index -->
+            <!-- Thẻ 3: Toàn Vẹn Quan Hệ & Chuẩn Hóa CSDL -->
             <div class="key-point-card db-card-compact border-left-green">
               <div class="db-card-header">
-                <span class="badge bg-success text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-check2-all me-1"></i>Chuẩn Hóa 3NF &amp; Toàn Vẹn Quan Hệ</span>
+                <span class="badge bg-success text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-shield-check me-1"></i>Toàn Vẹn Dữ Liệu</span>
                 <span class="badge bg-success-subtle text-success fw-bold font-monospace px-2 py-0.5 card-badge-sm">100% Chuẩn 3NF</span>
               </div>
-              <h6 class="db-card-title">Ràng Buộc Khóa Ngoại Đa Chiều &amp; Đánh Chỉ Mục Index Tối Ưu</h6>
+              <h6 class="db-card-title">Thiết Kế Chuẩn 3NF &amp; Ràng Buộc Khóa Ngoại Chặt Chẽ</h6>
               <div class="db-card-body">
-                <div class="db-card-line"><strong>• Chuẩn 3NF toàn diện:</strong> Loại bỏ triệt để phụ thuộc bắc cầu; 100% bảng có Khóa chính PK (BIGINT/UUID).</div>
-                <div class="db-card-line"><strong>• Ràng buộc FK &amp; Composite Index:</strong> Khóa ngoại <code class="db-table-chip">ON DELETE RESTRICT</code> chống dữ liệu mồ côi; Composite Index trên <code class="db-table-chip">(doctor_id, schedule_date)</code>, <code class="db-table-chip">booking_code</code> truy vấn &lt; 15ms.</div>
+                <div class="db-card-line"><strong>• Chuẩn 3NF:</strong> Thiết kế phân tách bảng khoa học, loại bỏ phụ thuộc bắc cầu; 100% bảng có khóa chính (PK).</div>
+                <div class="db-card-line"><strong>• Ràng buộc toàn vẹn:</strong> Khóa ngoại (<code class="db-table-chip">ON DELETE RESTRICT</code>) đảm bảo không xóa nhầm dữ liệu lịch sử ca khám, bệnh án và viện phí.</div>
+                <div class="db-card-line"><strong>• Tối ưu tra cứu:</strong> Đánh chỉ mục Index trên <code class="db-table-chip">booking_code</code>, mã bác sĩ và ngày khám giúp truy xuất thông tin nhanh chóng.</div>
               </div>
             </div>
           </div>
@@ -655,26 +805,160 @@
         </div>
       </div>
     </section>
+    <!-- Slide 10: Tổng Kết Đề Tài & Định Hướng Phát Triển -->
+    <section class="slide-section" id="slide-10">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <!-- Slide Header -->
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div class="d-flex align-items-center gap-2">
+            <h2 class="h4 fw-bold mb-0 text-slate-900">09. Tổng Kết Đề Tài &amp; Định Hướng Phát Triển</h2>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <!-- Slide Body: 2 Cột Cân Xứng -->
+        <div class="row g-3 my-auto align-items-stretch">
+          <!-- Cột 1: Điểm Mạnh & Kết Quả Đạt Được -->
+          <div class="col-lg-6">
+            <div class="conclusion-panel conclusion-panel-strength">
+              <div class="d-flex align-items-center justify-content-between pb-2 mb-2 border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="conclusion-icon-wrap" style="background-color: #e0f2fe; color: #0284c7;">
+                    <i class="bi bi-patch-check-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-900 mb-0 fs-6">Điểm Mạnh &amp; Kết Quả Đạt Được</h5>
+                    <span class="text-muted" style="font-size: 0.72rem;">Những giá trị cốt lõi hệ thống đã hoàn thiện</span>
+                  </div>
+                </div>
+                <span class="badge bg-primary text-white px-2 py-0.5" style="font-size: 0.7rem;">Đã Hoàn Thành</span>
+              </div>
+
+              <div class="d-flex flex-column gap-2 my-auto">
+                <!-- Điểm mạnh 1 -->
+                <div class="conclusion-item">
+                  <div class="conclusion-icon-wrap" style="background-color: #eff6ff; color: #2563eb;">
+                    <i class="bi bi-hospital fs-5"></i>
+                  </div>
+                  <div>
+                    <div class="conclusion-item-title">Khép kín quy trình khám bệnh thực tế</div>
+                    <p class="conclusion-item-desc">Hoàn thiện liền mạch: Đặt hẹn trực tuyến ➔ Tiếp đón tại quầy ➔ Khám bệnh &amp; chẩn đoán ICD-10 ➔ Kê đơn thuốc điện tử &amp; Thanh toán viện phí.</p>
+                  </div>
+                </div>
+
+                <!-- Điểm mạnh 2 -->
+                <div class="conclusion-item">
+                  <div class="conclusion-icon-wrap" style="background-color: #f5f3ff; color: #7c3aed;">
+                    <i class="bi bi-people-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <div class="conclusion-item-title">Phân quyền 4 vai trò độc lập, rõ ràng (RBAC)</div>
+                    <p class="conclusion-item-desc">Tối ưu giao diện và nghiệp vụ chuyên biệt cho từng đối tượng: Bệnh nhân, Nhân viên tiếp đón (Lễ tân), Bác sĩ chuyên khoa và Quản trị viên.</p>
+                  </div>
+                </div>
+
+                <!-- Điểm mạnh 3 -->
+                <div class="conclusion-item">
+                  <div class="conclusion-icon-wrap" style="background-color: #ecfeff; color: #0891b2;">
+                    <i class="bi bi-layers-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <div class="conclusion-item-title">Kiến trúc chuẩn mực &amp; CSDL toàn vẹn</div>
+                    <p class="conclusion-item-desc">Mô hình phân tầng Client - Backend - Database rõ ràng; CSDL chuẩn 3NF có ràng buộc khóa ngoại chặt chẽ, đảm bảo không thất thoát dữ liệu y tế.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột 2: Hướng Phát Triển Về Sau -->
+          <div class="col-lg-6">
+            <div class="conclusion-panel conclusion-panel-future">
+              <div class="d-flex align-items-center justify-content-between pb-2 mb-2 border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="conclusion-icon-wrap" style="background-color: #ccfbf1; color: #0f766e;">
+                    <i class="bi bi-compass-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <h5 class="fw-bold text-slate-900 mb-0 fs-6">Định Hướng Phát Triển Về Sau</h5>
+                    <span class="text-muted" style="font-size: 0.72rem;">Mở rộng tính năng và nâng cao giá trị thực tiễn</span>
+                  </div>
+                </div>
+                <span class="badge bg-teal-subtle text-teal border border-teal px-2 py-0.5" style="font-size: 0.7rem;">Giai Đoạn Kế Tiếp</span>
+              </div>
+
+              <div class="d-flex flex-column gap-2 my-auto">
+                <!-- Hướng phát triển 1 -->
+                <div class="conclusion-item">
+                  <div class="conclusion-icon-wrap" style="background-color: #ecfdf5; color: #059669;">
+                    <i class="bi bi-qr-code-scan fs-5"></i>
+                  </div>
+                  <div>
+                    <div class="conclusion-item-title">Tích hợp Cổng thanh toán trực tuyến (VNPay / MoMo)</div>
+                    <p class="conclusion-item-desc">Hỗ trợ người bệnh thanh toán viện phí từ xa qua mã QR ngân hàng hoặc ví điện tử, giảm tải ùn ứ và rút ngắn thời gian tại quầy thu ngân.</p>
+                  </div>
+                </div>
+
+                <!-- Hướng phát triển 2 -->
+                <div class="conclusion-item">
+                  <div class="conclusion-icon-wrap" style="background-color: #f0fdf4; color: #16a34a;">
+                    <i class="bi bi-phone-fill fs-5"></i>
+                  </div>
+                  <div>
+                    <div class="conclusion-item-title">Ứng dụng di động &amp; Nhắc lịch tự động</div>
+                    <p class="conclusion-item-desc">Xây dựng ứng dụng di động cho bệnh nhân; gửi tin nhắn SMS / Zalo ZNS tự động nhắc nhở người bệnh trước khung giờ khám hoặc lịch tái khám.</p>
+                  </div>
+                </div>
+
+                <!-- Hướng phát triển 3 -->
+                <div class="conclusion-item">
+                  <div class="conclusion-icon-wrap" style="background-color: #faf5ff; color: #9333ea;">
+                    <i class="bi bi-link-45deg fs-5"></i>
+                  </div>
+                  <div>
+                    <div class="conclusion-item-title">Sẵn sàng kết nối liên thông hệ thống y tế</div>
+                    <p class="conclusion-item-desc">Định chuẩn API dữ liệu theo chuẩn ngành y tế (HL7/FHIR) để sẵn sàng đồng bộ thông tin với các hệ thống quản lý bệnh viện (HIS/LIS) lớn.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Khung Chân Trang: Lời Cảm Ơn & Q&A -->
+        <div class="conclusion-footer-bar d-flex align-items-center justify-content-between flex-shrink-0 mt-2">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-success-subtle text-success border border-success px-2 py-1"><i class="bi bi-check2-circle me-1"></i>Hoàn Tất Báo Cáo</span>
+            <span class="small text-slate-700 fw-semibold">Kính chúc Quý Thầy/Cô dồi dào sức khỏe! Nhóm xin chân thành cảm ơn Hội đồng đã theo dõi và đóng góp ý kiến.</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-dark text-white px-3 py-1.5"><i class="bi bi-chat-dots-fill me-1.5"></i>Q&amp;A • Sẵn Sàng Trả Lời Câu Hỏi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </div>
 
   <!-- Left Side Slide Indicators (8 Slides Toàn Diện Chuẩn Doanh Nghiệp) -->
   <nav class="side-number-indicator-list" id="sideNav" aria-label="Mục lục Slide">
     <a href="#slide-01" class="side-number-item active" data-index="0" data-tooltip="Bìa Báo Cáo"><i class="bi bi-house-door-fill fs-icon-xs"></i></a>
-    <a href="#slide-02" class="side-number-item" data-index="1" data-tooltip="01. Đội Ngũ Phát Triển">01</a>
+    <a href="#slide-02" class="side-number-item" data-index="1" data-tooltip="01. Cấu Trúc Dự Án">01</a>
     <a href="#slide-03" class="side-number-item" data-index="2" data-tooltip="02. Nghiệp Vụ 1 Ca Khám">02</a>
     <a href="#slide-04" class="side-number-item" data-index="3" data-tooltip="03. Kiến Trúc Tổng Thể">03</a>
     <a href="#slide-05" class="side-number-item" data-index="4" data-tooltip="04. Lõi Hexagonal">04</a>
-    <a href="#slide-06" class="side-number-item" data-index="5" data-tooltip="05. CSDL 23 Bảng 3NF">05</a>
+    <a href="#slide-06" class="side-number-item" data-index="5" data-tooltip="05. CSDL Quan Hệ 3NF">05</a>
     <a href="#slide-07" class="side-number-item" data-index="6" data-tooltip="06. Atomic CAS & Spring AI">06</a>
     <a href="#slide-08" class="side-number-item" data-index="7" data-tooltip="07. Prometheus & Grafana">07</a>
-    <a href="#slide-09" class="side-number-item" data-index="8" data-tooltip="08. Live Demo & Q&A">08</a>
+    <a href="#slide-09" class="side-number-item" data-index="8" data-tooltip="08. Trình Diễn Live Demo">08</a>
+    <a href="#slide-10" class="side-number-item" data-index="9" data-tooltip="09. Tổng Kết &amp; Định Hướng">09</a>
   </nav>
 
 <!-- Bottom Floating Navigation Toolbar -->
   <div class="bottom-nav-bar" id="bottomNav">
     <button type="button" class="nav-arrow-btn" id="prevSlideBtn" title="Slide trước (← hoặc Phím lên)" aria-label="Slide trước"><i class="bi bi-chevron-left"></i></button>
-    <div class="slide-indicator-label" id="slideIndicatorLabel">01 / 09</div>
+    <div class="slide-indicator-label" id="slideIndicatorLabel">01 / 10</div>
     <button type="button" class="nav-arrow-btn" id="nextSlideBtn" title="Slide kế (→ hoặc Phím cách)" aria-label="Slide kế tiếp"><i class="bi bi-chevron-right"></i></button>
     <button type="button" class="nav-arrow-btn" id="fullScreenBtn" title="Toàn màn hình trình chiếu (Phím F)" aria-label="Toàn màn hình trình chiếu"><i class="bi bi-arrows-fullscreen"></i></button>
   </div>
