@@ -541,18 +541,18 @@
           <div class="col-lg-4 col-xl-3 d-flex flex-column gap-2">
             <div class="key-point-card border-left-red">
               <span class="badge bg-danger text-white mb-1">Tâm Lục Giác</span>
-              <h6 class="fw-bold">Lõi Core Domain (0% Spring)</h6>
-              <p class="mb-0">Hoàn toàn là Java 21 thuần túy, chứa các thực thể và Use Case y tế độc lập 100% với Spring Framework.</p>
+              <h6 class="fw-bold">Lõi Core Domain</h6>
+              <p class="mb-0">Chứa thực thể và quy tắc nghiệp vụ y tế cốt lõi, độc lập với framework bên ngoài.</p>
             </div>
             <div class="key-point-card border-left-emerald">
               <span class="badge bg-success text-white mb-1">3 Cạnh Bên Trái</span>
               <h6 class="fw-bold">Inbound Ports &amp; Adapters</h6>
-              <p class="mb-0">Cổng tiếp nhận yêu cầu từ Web Next.js 15, máy quét mã QR tiếp đón và Filter kiểm soát JWT 1 phiên duy nhất.</p>
+              <p class="mb-0">Tiếp nhận yêu cầu từ Web Client (Next.js) và các giao diện tiếp đón tại quầy.</p>
             </div>
             <div class="key-point-card border-left-purple">
               <span class="badge text-white mb-1 bg-purple-accent">3 Cạnh Bên Phải</span>
               <h6 class="fw-bold">Outbound Ports &amp; Adapters</h6>
-              <p class="mb-0">Cổng cắm ngoại vi: Spring Data JPA (MySQL 23 bảng), Spring AI (Gemini 2.5 Flash) và VietQR tự động.</p>
+              <p class="mb-0">Kết nối các dịch vụ ngoài: Cơ sở dữ liệu MySQL, cổng thanh toán và thông báo.</p>
             </div>
           </div>
         </div>
@@ -620,14 +620,13 @@
             <!-- Thẻ 3: Toàn Vẹn Quan Hệ & Chuẩn Hóa CSDL -->
             <div class="key-point-card db-card-compact border-left-green">
               <div class="db-card-header">
-                <span class="badge bg-success text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-shield-check me-1"></i>Toàn Vẹn Dữ Liệu</span>
-                <span class="badge bg-success-subtle text-success fw-bold font-monospace px-2 py-0.5 card-badge-sm">100% Chuẩn 3NF</span>
+                <span class="badge bg-success text-white py-0.5 px-2 card-badge-sm"><i class="bi bi-shield-check me-1"></i>Chuẩn Hóa CSDL</span>
+                <span class="badge bg-success-subtle text-success fw-bold font-monospace px-2 py-0.5 card-badge-sm">Thiết Kế 3NF</span>
               </div>
-              <h6 class="db-card-title">Thiết Kế Chuẩn 3NF &amp; Ràng Buộc Khóa Ngoại Chặt Chẽ</h6>
+              <h6 class="db-card-title">Thiết Kế 3NF &amp; Ràng Buộc Khóa Ngoại</h6>
               <div class="db-card-body">
-                <div class="db-card-line"><strong>• Chuẩn 3NF:</strong> Thiết kế phân tách bảng khoa học, loại bỏ phụ thuộc bắc cầu; 100% bảng có khóa chính (PK).</div>
-                <div class="db-card-line"><strong>• Ràng buộc toàn vẹn:</strong> Khóa ngoại (<code class="db-table-chip">ON DELETE RESTRICT</code>) đảm bảo không xóa nhầm dữ liệu lịch sử ca khám, bệnh án và viện phí.</div>
-                <div class="db-card-line"><strong>• Tối ưu tra cứu:</strong> Đánh chỉ mục Index trên <code class="db-table-chip">booking_code</code>, mã bác sĩ và ngày khám giúp truy xuất thông tin nhanh chóng.</div>
+                <div class="db-card-line"><strong>• Thiết kế 3NF:</strong> Mỗi bảng chỉ lưu đúng 1 đối tượng riêng biệt (Bác sĩ, Bệnh nhân, Đơn thuốc), không lưu trùng lặp dữ liệu, khi cập nhật thông tin chỉ cần sửa ở 1 nơi duy nhất.</div>
+                <div class="db-card-line"><strong>• Ràng buộc khóa ngoại:</strong> Ràng buộc chặt chẽ quan hệ giữa các bảng (<code class="db-table-chip">ON DELETE RESTRICT</code>), ngăn chặn tuyệt đối việc xóa nhầm lịch sử ca khám, bệnh án và hóa đơn.</div>
               </div>
             </div>
           </div>
@@ -844,36 +843,36 @@
               </div>
 
               <div class="d-flex flex-column gap-2 my-auto">
-                <!-- Hướng phát triển 1 -->
+                <!-- Hướng phát triển 1: Kiosk cảm ứng tự phục vụ (Dự án chưa có) -->
                 <div class="conclusion-item">
                   <div class="conclusion-icon-wrap" style="background-color: #ecfdf5; color: #059669;">
-                    <i class="bi bi-qr-code-scan fs-5"></i>
+                    <i class="bi bi-display fs-5"></i>
                   </div>
                   <div>
-                    <div class="conclusion-item-title">Tích hợp Cổng thanh toán trực tuyến (VNPay / MoMo)</div>
-                    <p class="conclusion-item-desc">Hỗ trợ người bệnh thanh toán viện phí từ xa qua mã QR ngân hàng hoặc ví điện tử, giảm tải ùn ứ và rút ngắn thời gian tại quầy thu ngân.</p>
+                    <div class="conclusion-item-title">Kiosk tiếp đón tự phục vụ tại sảnh chờ (Self-Check-in)</div>
+                    <p class="conclusion-item-desc">Phát triển phần mềm Kiosk cảm ứng chuyên dụng để người bệnh tự quét mã hẹn hoặc CCCD lấy số thứ tự tự động, giảm tải hoàn toàn cho quầy tiếp đón.</p>
                   </div>
                 </div>
 
-                <!-- Hướng phát triển 2 -->
+                <!-- Hướng phát triển 2: App di động & SMS/Zalo ZNS (Dự án chưa có) -->
                 <div class="conclusion-item">
                   <div class="conclusion-icon-wrap" style="background-color: #f0fdf4; color: #16a34a;">
                     <i class="bi bi-phone-fill fs-5"></i>
                   </div>
                   <div>
-                    <div class="conclusion-item-title">Ứng dụng di động &amp; Nhắc lịch tự động</div>
-                    <p class="conclusion-item-desc">Xây dựng ứng dụng di động cho bệnh nhân; gửi tin nhắn SMS / Zalo ZNS tự động nhắc nhở người bệnh trước khung giờ khám hoặc lịch tái khám.</p>
+                    <div class="conclusion-item-title">Ứng dụng di động &amp; Nhắc lịch đa kênh (Mobile App &amp; SMS/Zalo)</div>
+                    <p class="conclusion-item-desc">Xây dựng ứng dụng di động chuyên biệt (Flutter); tích hợp SMS Brandname và Zalo ZNS tự động nhắn tin nhắc nhở người bệnh trước khung giờ khám.</p>
                   </div>
                 </div>
 
-                <!-- Hướng phát triển 3 -->
+                <!-- Hướng phát triển 3: Chuẩn hóa liên thông HIS/LIS (Dự án chưa có) -->
                 <div class="conclusion-item">
                   <div class="conclusion-icon-wrap" style="background-color: #faf5ff; color: #9333ea;">
                     <i class="bi bi-link-45deg fs-5"></i>
                   </div>
                   <div>
-                    <div class="conclusion-item-title">Sẵn sàng kết nối liên thông hệ thống y tế</div>
-                    <p class="conclusion-item-desc">Định chuẩn API dữ liệu theo chuẩn ngành y tế (HL7/FHIR) để sẵn sàng đồng bộ thông tin với các hệ thống quản lý bệnh viện (HIS/LIS) lớn.</p>
+                    <div class="conclusion-item-title">Sẵn sàng kết nối liên thông hệ thống y tế (HIS / LIS)</div>
+                    <p class="conclusion-item-desc">Định chuẩn API dữ liệu theo tiêu chuẩn y tế quốc tế (HL7/FHIR) để sẵn sàng đồng bộ hồ sơ bệnh án với các hệ thống quản lý bệnh viện lớn.</p>
                   </div>
                 </div>
               </div>
