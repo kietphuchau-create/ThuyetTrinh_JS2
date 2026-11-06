@@ -209,7 +209,7 @@
                     <div class="task-bullet" style="color: #d97706;"><i class="bi bi-upc-scan"></i></div>
                     <div class="task-text">
                       <strong>Tiếp nhận nhanh chóng</strong>
-                      Quét mã QR hoặc CCCD gắn chip đối soát thông tin đặt hẹn.
+                      Quét mã QR đối soát thông tin đặt hẹn.
                     </div>
                   </div>
                   <div class="module-task-item">
@@ -708,28 +708,19 @@
               </div>
             </div>
 
-            <!-- Thẻ 2: Quản Trị Hệ Thống & Viện Phí -->
+            <!-- Thẻ 2: Quản Trị Hệ Thống -->
             <div class="key-point-card db-card-compact border-left-teal">
               <div class="db-card-header">
                 <span class="badge text-white py-0.5 px-2 bg-teal-accent card-badge-sm"><i
-                    class="bi bi-person-badge me-1"></i>Quản Trị &amp; Viện Phí</span>
-                <span class="badge bg-teal-subtle text-teal fw-bold font-monospace px-2 py-0.5 card-badge-sm">Vận Hành
-                  &amp; Thanh Toán</span>
+                    class="bi bi-person-badge me-1"></i>Quản Trị</span>
+                <span class="badge bg-teal-subtle text-teal fw-bold font-monospace px-2 py-0.5 card-badge-sm">Vận Hành</span>
               </div>
-              <h6 class="db-card-title">Người Dùng, Phân Quyền &amp; Hóa Đơn Dịch Vụ</h6>
+              <h6 class="db-card-title">Người Dùng</h6>
               <div class="db-card-body">
                 <div class="db-card-line"><strong>• Người dùng &amp; Phân quyền:</strong> <code
                     class="db-table-chip">users</code>, <code class="db-table-chip">patient_profiles</code>, <code
                     class="db-table-chip">medical_centers</code>, <code
-                    class="db-table-chip">user_medical_center_roles</code> (Quản lý tài khoản, hồ sơ người bệnh và vai
-                  trò).</div>
-                <div class="db-card-line"><strong>• Hóa đơn &amp; Thanh toán:</strong> <code
-                    class="db-table-chip">invoices</code>, <code class="db-table-chip">payments</code> (Xuất viện phí,
-                  lưu lịch sử giao dịch rõ ràng, minh bạch).</div>
-                <div class="db-card-line"><strong>• Tiện ích hỗ trợ:</strong> <code
-                    class="db-table-chip">promotions</code>, <code class="db-table-chip">doctor_reviews</code>, <code
-                    class="db-table-chip">system_settings</code> (Ưu đãi dịch vụ, đánh giá bác sĩ và cấu hình hệ thống).
-                </div>
+                    class="db-table-chip">user_medical_center_roles</code> (Quản lý tài khoản, hồ sơ người bệnh và phân định vai trò RBAC).</div>
               </div>
             </div>
 
@@ -782,14 +773,13 @@
             <div class="key-point-card border-left-red">
               <span class="badge bg-danger text-white mb-1">Giải Thuật CAS</span>
               <h6 class="fw-bold">Cơ chế Atomic Compare-and-Set</h6>
-              <p class="mb-0">Lệnh `UPDATE time_slots SET status='BOOKED' WHERE id=:id AND status='AVAILABLE'` chống
-                double-booking.</p>
+              <p class="mb-0">Thiết kế cơ chế chống overbooking.</p>
             </div>
             <div class="key-point-card border-left-amber">
               <span class="badge bg-amber text-white mb-1 bg-amber-accent">Cơ Chế Phục Hồi</span>
               <h6 class="fw-bold">Fallback &amp; Cron 15 Phút</h6>
-              <p class="mb-0">Người thất bại nhận 409 và gợi ý giờ tiếp theo. Cron Job 15p tự động nhả slot nếu không
-                cọc VietQR.</p>
+              <p class="mb-0">Người thất bại nhận thông báo và được gợi ý khung giờ khác, sau 15p tự động mở slot nếu
+                người đặt không đặt cọc.</p>
             </div>
           </div>
         </div>

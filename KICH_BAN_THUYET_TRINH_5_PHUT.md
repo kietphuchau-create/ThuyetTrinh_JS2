@@ -78,7 +78,7 @@ Cách tổ chức này giúp nghiệp vụ ít phụ thuộc framework, dễ ki�
 
 “Cơ sở dữ liệu MySQL được chuẩn hóa đến 3NF, gồm 23 bảng và các ràng buộc khóa ngoại.
 
-Các bảng được chia theo hai nhóm nghiệp vụ chính: khám chữa bệnh, gồm chuyên khoa, lịch khám và bệnh án; cùng nhóm quản trị và viện phí, gồm người dùng, phân quyền, hóa đơn và thanh toán.
+Các bảng được chia theo hai nhóm nghiệp vụ chính: khám chữa bệnh, gồm chuyên khoa, lịch khám và bệnh án; cùng nhóm quản trị vận hành, tập trung vào người dùng và phân quyền vai trò.
 
 Thiết kế này hạn chế dữ liệu trùng lặp và bảo đảm tính liên kết của hồ sơ y tế.”
 
