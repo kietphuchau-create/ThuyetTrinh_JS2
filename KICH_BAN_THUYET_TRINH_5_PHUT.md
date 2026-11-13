@@ -118,11 +118,23 @@ Bên cạnh đó, nhóm tích hợp Spring AI và Gemini để hỗ trợ phân 
 
 Nhóm theo dõi độ trễ API, mức sử dụng CPU, bộ nhớ JVM Heap và kết nối cơ sở dữ liệu HikariCP. Trên dashboard giám sát thực tế, CPU duy trì ở mức an toàn khoảng 19%, JVM Heap khoảng 54,8 MB và hoàn toàn không có rò rỉ kết nối. Hệ thống cũng thiết lập sẵn ngưỡng cảnh báo tự động.”
 
-**Chuyển ý:** “Sau đây, nhóm xin trình diễn nhanh luồng sử dụng thực tế của hệ thống.”
+**Chuyển ý:** “Từ toàn bộ nền tảng kỹ thuật trên, nhóm xin tổng kết kết quả của đề tài trước khi bước vào phần Live Demo.”
 
 ---
 
-## Slide 10 — Demo nhanh (3:55–4:30)
+## Slide 10 — Tổng kết và định hướng phát triển (3:55–4:25)
+
+**Lời nói:**
+
+“Tóm lại, MedSched đã hoàn thiện trọn vẹn quy trình khám bệnh khép kín, phân quyền rõ ràng cho bốn vai trò và xây dựng nền tảng dữ liệu toàn vẹn chuẩn 3NF. Hệ thống xử lý triệt để bài toán đặt trùng lịch và có công cụ giám sát vận hành thời gian thực.
+
+Trong thời gian tới, nhóm định hướng mở rộng: phát triển Kiosk tự phục vụ tại sảnh chờ, xây dựng Mobile App chuyên biệt kết hợp nhắc lịch qua SMS/Zalo, và chuẩn hóa API theo tiêu chuẩn HL7/FHIR để kết nối liên thông với các hệ thống bệnh viện lớn.”
+
+**Chuyển ý:** “Ngay sau đây, nhóm xin kính mời Quý Thầy/Cô cùng theo dõi phần trình diễn Live Demo trực tiếp sản phẩm.”
+
+---
+
+## Slide 11 — Trình diễn Live Demo & Q&A (4:25–5:00)
 
 **Thao tác và lời nói:**
 
@@ -136,19 +148,9 @@ Nhóm theo dõi độ trễ API, mức sử dụng CPU, bộ nhớ JVM Heap và 
 
 “Do thời lượng có hạn, nhóm xin phép chuyển sang video mô phỏng đã chuẩn bị sẵn để chứng minh cùng một quy trình hoàn chỉnh.”
 
-**Chuyển ý:** “Từ phần trình diễn trên, nhóm xin tổng kết kết quả của đề tài.”
+**Kết thúc:**
 
----
-
-## Slide 11 — Tổng kết và định hướng phát triển (4:30–5:00)
-
-**Lời nói:**
-
-“Tóm lại, MedSched đã hoàn thiện trọn vẹn quy trình khám bệnh khép kín, phân quyền rõ ràng cho bốn vai trò và xây dựng nền tảng dữ liệu toàn vẹn chuẩn 3NF. Hệ thống xử lý triệt để bài toán đặt trùng lịch và có công cụ giám sát vận hành thời gian thực.
-
-Trong thời gian tới, nhóm định hướng mở rộng: phát triển Kiosk tự phục vụ tại sảnh chờ, xây dựng Mobile App chuyên biệt kết hợp nhắc lịch qua SMS/Zalo, và chuẩn hóa API theo tiêu chuẩn HL7/FHIR để kết nối liên thông với các hệ thống bệnh viện lớn.
-
-Phần trình bày của nhóm em đến đây là kết thúc. Nhóm em xin chân thành cảm ơn Quý Thầy/Cô Hội đồng đã lắng nghe, và xin sẵn sàng trả lời các câu hỏi.”
+“Phần trình bày và demo của nhóm em đến đây là kết thúc. Nhóm em xin chân thành cảm ơn Quý Thầy/Cô Hội đồng đã theo dõi, và xin sẵn sàng lắng nghe câu hỏi từ Thầy/Cô ạ.”
 
 ---
 
@@ -156,6 +158,6 @@ Phần trình bày của nhóm em đến đây là kết thúc. Nhóm em xin ch�
 
 - Bắt đầu bấm giờ ngay khi mở lời chào Hội đồng.
 - Không đọc từng chữ trên slide, chỉ nói các ý cốt lõi theo kịch bản.
-- Nếu đến Slide 8 mà đồng hồ đã qua 3 phút 20 giây: nói ngắn gọn cơ chế chống trùng và chuyển nhanh sang Demo.
-- Khi demo chỉ cần đi 3 bước chính: Đặt lịch ➔ Nhận QR ➔ Check-in tại quầy.
-- Đảm bảo chuyển sang Slide Tổng kết trước mốc 4 phút 30 giây.
+- Trình bày Tổng kết trước giúp hội đồng nắm trọn giá trị đề tài trước khi xem demo.
+- Khi demo chỉ cần đi 3 thao tác chính: Đặt lịch ➔ Nhận QR ➔ Check-in tại quầy.
+- Để dành tối thiểu 30–40 giây cuối cùng cho phần demo và chuyển sang Q&A.
