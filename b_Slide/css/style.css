@@ -2711,3 +2711,27 @@
   border-radius: 10px !important;
   padding: 8px 16px !important;
 }
+
+
+    /* Slide 01b: Tổng Quan Dự Án & Bối Cảnh Thực Tế */
+    #slide-01b .content-box {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+    #slide-01b .overview-cards-row {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+      flex-grow: 0 !important;
+      padding: 6px 0 !important;
+    }
+    .module-card-problem { border-top: 4px solid #ef4444 !important; }
+    .module-card-solution { border-top: 4px solid #0284c7 !important; }
+    .module-card-value { border-top: 4px solid #10b981 !important; }
+    
+    .overview-summary-bar {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 12px !important;
+      padding: 10px 18px !important;
+    }

@@ -129,12 +129,179 @@
 
 
     <!-- SLIDE 02: CẤU TRÚC DỰ ÁN & CÁC PHÂN HỆ CỐT LÕI -->
+    
+    <!-- Slide 01b: Giới Thiệu Tổng Quan Dự Án & Bối Cảnh Thực Tế -->
+    <section class="slide-section" id="slide-01b">
+      <div class="content-box d-flex flex-column justify-content-between">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
+          <div>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">01. Tổng Quan Dự Án &amp; Bối Cảnh Thực Tế</h2>
+            <p class="text-muted small mb-0">MedSched — Hệ thống chuyển đổi số toàn diện quy trình tiếp đón và khám bệnh tại cơ sở y tế</p>
+          </div>
+          <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
+        </div>
+
+        <!-- 3 Cột: Thực Trạng ➔ Giải Pháp MedSched ➔ Giá Trị Đem Lại -->
+        <div class="row g-3 overview-cards-row align-items-stretch">
+          <!-- Cột 1: Bất Cập Thực Tế -->
+          <div class="col-lg-4">
+            <div class="module-card module-card-problem h-100">
+              <div>
+                <div class="module-card-head">
+                  <div class="d-flex align-items-center gap-2.5">
+                    <div class="module-icon-box" style="background-color: #fef2f2; color: #ef4444;">
+                      <i class="bi bi-exclamation-triangle-fill fs-5"></i>
+                    </div>
+                    <div>
+                      <h5 class="module-title">Khám Bệnh Truyền Thống</h5>
+                      <span class="badge bg-danger-subtle text-danger border border-danger px-1.5 py-0.5" style="font-size: 0.68rem;">Bất Cập Thực Tế</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-body-list">
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #ef4444;"><i class="bi bi-hourglass-split"></i></div>
+                    <div class="task-text">
+                      <strong>Chờ đợi &amp; Ùn tắc kéo dài</strong>
+                      Bệnh nhân phải đến từ rất sớm, bốc số thứ tự giấy và mệt mỏi chờ đợi hàng giờ tại sảnh.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #ef4444;"><i class="bi bi-person-x-fill"></i></div>
+                    <div class="task-text">
+                      <strong>Phân bổ không đồng đều</strong>
+                      Thiếu công cụ điều phối khiến một số bác sĩ quá tải bệnh nhân, trong khi khung giờ khác lại vắng.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #ef4444;"><i class="bi bi-file-earmark-x"></i></div>
+                    <div class="task-text">
+                      <strong>Hồ sơ sổ sách rời rạc</strong>
+                      Lịch hẹn, sổ khám bệnh và đơn thuốc giấy dễ thất lạc, khó khăn trong việc tra cứu tiền sử bệnh lý.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="module-card-foot">
+                <span class="foot-label"><i class="bi bi-x-circle me-1"></i>Hạn chế:</span>
+                <span class="foot-badge text-danger" style="background: #fef2f2; border-color: #fecaca;">Gây lãng phí thời gian</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột 2: Giải Pháp MedSched -->
+          <div class="col-lg-4">
+            <div class="module-card module-card-solution h-100">
+              <div>
+                <div class="module-card-head">
+                  <div class="d-flex align-items-center gap-2.5">
+                    <div class="module-icon-box" style="background-color: #eff6ff; color: #0284c7;">
+                      <i class="bi bi-hospital fs-5"></i>
+                    </div>
+                    <div>
+                      <h5 class="module-title">Giải Pháp MedSched</h5>
+                      <span class="badge bg-primary text-white px-1.5 py-0.5" style="font-size: 0.68rem;">Hệ Thống Đặt Lịch Thông Minh</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-body-list">
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #0284c7;"><i class="bi bi-calendar2-check-fill"></i></div>
+                    <div class="task-text">
+                      <strong>Chủ động chọn lịch trực tuyến</strong>
+                      Người bệnh tự chọn bác sĩ, chuyên khoa và khung giờ còn trống ngay trên điện thoại hoặc máy tính.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #0284c7;"><i class="bi bi-qr-code-scan"></i></div>
+                    <div class="task-text">
+                      <strong>Tiếp đón không chạm qua mã QR</strong>
+                      Nhận vé hẹn điện tử kèm mã QR; quét mã tại quầy để đối soát và nhận số buồng khám trong vài giây.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #0284c7;"><i class="bi bi-clipboard2-pulse-fill"></i></div>
+                    <div class="task-text">
+                      <strong>Số hóa quy trình khám khép kín</strong>
+                      Bác sĩ lập bệnh án điện tử (ICD-10), kê đơn thuốc số và thanh toán viện phí minh bạch.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="module-card-foot">
+                <span class="foot-label"><i class="bi bi-check2-circle me-1"></i>Nền tảng:</span>
+                <span class="foot-badge text-primary" style="background: #eff6ff; border-color: #bfdbfe;">Khép kín &amp; Chuẩn y tế</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột 3: Giá Trị Đem Lại -->
+          <div class="col-lg-4">
+            <div class="module-card module-card-value h-100">
+              <div>
+                <div class="module-card-head">
+                  <div class="d-flex align-items-center gap-2.5">
+                    <div class="module-icon-box" style="background-color: #ecfdf5; color: #10b981;">
+                      <i class="bi bi-award-fill fs-5"></i>
+                    </div>
+                    <div>
+                      <h5 class="module-title">Hiệu Quả &amp; Giá Trị</h5>
+                      <span class="badge bg-success-subtle text-success border border-success px-1.5 py-0.5" style="font-size: 0.68rem;">Lợi Ích Đem Lại</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="module-body-list">
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #10b981;"><i class="bi bi-lightning-charge-fill"></i></div>
+                    <div class="task-text">
+                      <strong>Tiết kiệm thời gian người bệnh</strong>
+                      Xóa bỏ cảnh chen lấn bốc số; bệnh nhân chỉ cần đến trước giờ hẹn 10 phút là được vào khám đúng lịch.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #10b981;"><i class="bi bi-graph-up-arrow"></i></div>
+                    <div class="task-text">
+                      <strong>Tối ưu năng suất phòng khám</strong>
+                      Phân bổ đều ca khám theo các khung giờ trực, giảm áp lực cho y bác sĩ và nhân viên tiếp đón.
+                    </div>
+                  </div>
+                  <div class="module-task-item">
+                    <div class="task-bullet" style="color: #10b981;"><i class="bi bi-shield-lock-fill"></i></div>
+                    <div class="task-text">
+                      <strong>Quản trị tập trung &amp; Minh bạch</strong>
+                      Dữ liệu lịch hẹn, hồ sơ bệnh án và lịch sử viện phí được quản lý an toàn, chính xác và bảo mật.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="module-card-foot">
+                <span class="foot-label"><i class="bi bi-stars me-1"></i>Mục tiêu:</span>
+                <span class="foot-badge text-success" style="background: #ecfdf5; border-color: #a7f3d0;">Nâng cao chất lượng dịch vụ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Khung Chân Trang: Định Vị Sản Phẩm (Key Takeaway Bar) -->
+        <div class="overview-summary-bar d-flex align-items-center justify-content-between flex-shrink-0 mt-2">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-primary text-white px-2 py-1"><i class="bi bi-lightbulb-fill me-1"></i>Định Vị Sản Phẩm</span>
+            <span class="small text-slate-800 fw-semibold">MedSched là cầu nối số hóa giữa Bệnh nhân và Phòng khám — Giúp người bệnh làm chủ thời gian, giúp cơ sở y tế vận hành khoa học và tối ưu công suất.</span>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-white text-slate-700 border px-2.5 py-1 small"><i class="bi bi-check2-all text-success me-1"></i>Giải Pháp Toàn Diện</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="slide-section" id="slide-02">
       <div class="content-box d-flex flex-column justify-content-between">
         <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div>
-            <h2 class="h4 fw-bold mb-0 text-slate-900">01. Cấu Trúc Dự Án &amp; Các vai trò Cốt Lõi</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">02. Cấu Trúc Dự Án &amp; Bốn Vai Trò Cốt Lõi</h2>
             <p class="text-muted small mb-0">Mô hình hoạt động và vai trò của 4 phân hệ người dùng phục vụ quy trình y
               tế</p>
           </div>
@@ -336,7 +503,7 @@
         <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom flex-shrink-0">
           <div>
-            <h2 class="h4 fw-bold mb-0 text-slate-900">02. Luồng Nghiệp Vụ 1 Ca Khám Hoàn Chỉnh</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">03. Luồng Nghiệp Vụ 1 Ca Khám Hoàn Chỉnh</h2>
             <span class="text-muted small">Quy trình vận hành 4 giai đoạn khép kín từ lúc đặt lịch hẹn đến khi hoàn tất
               xuất viện</span>
           </div>
@@ -597,7 +764,7 @@
       <div class="content-box d-flex flex-column justify-content-between">
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">03. Kiến Trúc Tổng Thể Hệ Thống (High-Level Architecture)</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">04. Kiến Trúc Tổng Thể Hệ Thống (High-Level Architecture)</h2>
             <a href="./medsched_archify_architecture.html" target="_blank"
               class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1 py-0.5 px-2">
               <i class="bi bi-box-arrow-up-right"></i> Mở toàn màn hình
@@ -621,7 +788,7 @@
       <div class="content-box d-flex flex-column justify-content-between">
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">04. Kiến Trúc Lõi Hexagonal (Ports &amp; Adapters)</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">05. Kiến Trúc Lõi Hexagonal (Ports &amp; Adapters)</h2>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
@@ -656,7 +823,7 @@
       <div class="content-box d-flex flex-column justify-content-between">
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">05. Thiết Kế Cơ Sở Dữ Liệu Quan Hệ (3NF - MySQL)</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">06. Thiết Kế Cơ Sở Dữ Liệu Quan Hệ (3NF - MySQL)</h2>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
@@ -791,7 +958,7 @@
       <div class="content-box d-flex flex-column justify-content-between">
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">07. Giám Sát Hiệu Năng: Prometheus &amp; Grafana</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">08. Giám Sát Hiệu Năng: Prometheus &amp; Grafana</h2>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
@@ -881,7 +1048,7 @@
       <div class="content-box d-flex flex-column justify-content-between text-center position-relative">
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">08. Trình Diễn Live Demo</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">09. Trình Diễn Live Demo</h2>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
@@ -900,7 +1067,7 @@
         <!-- Slide Header -->
         <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom">
           <div class="d-flex align-items-center gap-2">
-            <h2 class="h4 fw-bold mb-0 text-slate-900">09. Tổng Kết Đề Tài &amp; Định Hướng Phát Triển</h2>
+            <h2 class="h4 fw-bold mb-0 text-slate-900">10. Tổng Kết Đề Tài &amp; Định Hướng Phát Triển</h2>
           </div>
           <img src="./img/logo_itc.png" alt="Logo ITC" class="slide-header-itc-logo">
         </div>
@@ -1047,22 +1214,23 @@
   <nav class="side-number-indicator-list" id="sideNav" aria-label="Mục lục Slide">
     <a href="#slide-01" class="side-number-item active" data-index="0" data-tooltip="Bìa Báo Cáo"><i
         class="bi bi-house-door-fill fs-icon-xs"></i></a>
-    <a href="#slide-02" class="side-number-item" data-index="1" data-tooltip="01. Cấu Trúc Dự Án">01</a>
-    <a href="#slide-03" class="side-number-item" data-index="2" data-tooltip="02. Nghiệp Vụ 1 Ca Khám">02</a>
-    <a href="#slide-04" class="side-number-item" data-index="3" data-tooltip="03. Kiến Trúc Tổng Thể">03</a>
-    <a href="#slide-05" class="side-number-item" data-index="4" data-tooltip="04. Lõi Hexagonal">04</a>
-    <a href="#slide-06" class="side-number-item" data-index="5" data-tooltip="05. CSDL Quan Hệ 3NF">05</a>
-    <a href="#slide-07" class="side-number-item" data-index="6" data-tooltip="06. Atomic CAS & Spring AI">06</a>
-    <a href="#slide-08" class="side-number-item" data-index="7" data-tooltip="07. Prometheus & Grafana">07</a>
-    <a href="#slide-09" class="side-number-item" data-index="8" data-tooltip="08. Trình Diễn Live Demo">08</a>
-    <a href="#slide-10" class="side-number-item" data-index="9" data-tooltip="09. Tổng Kết &amp; Định Hướng">09</a>
+    <a href="#slide-01b" class="side-number-item" data-index="1" data-tooltip="01. Tổng Quan Dự Án">01</a>
+    <a href="#slide-02" class="side-number-item" data-index="2" data-tooltip="02. Bốn Vai Trò Cốt Lõi">02</a>
+    <a href="#slide-03" class="side-number-item" data-index="3" data-tooltip="03. Nghiệp Vụ 1 Ca Khám">03</a>
+    <a href="#slide-04" class="side-number-item" data-index="4" data-tooltip="04. Kiến Trúc Tổng Thể">04</a>
+    <a href="#slide-05" class="side-number-item" data-index="5" data-tooltip="05. Lõi Hexagonal">05</a>
+    <a href="#slide-06" class="side-number-item" data-index="6" data-tooltip="06. CSDL Quan Hệ 3NF">06</a>
+    <a href="#slide-07" class="side-number-item" data-index="7" data-tooltip="07. Concurrency &amp; AI">07</a>
+    <a href="#slide-08" class="side-number-item" data-index="8" data-tooltip="08. Prometheus &amp; Grafana">08</a>
+    <a href="#slide-09" class="side-number-item" data-index="9" data-tooltip="09. Trình Diễn Live Demo">09</a>
+    <a href="#slide-10" class="side-number-item" data-index="10" data-tooltip="10. Tổng Kết &amp; Định Hướng">10</a>
   </nav>
 
   <!-- Bottom Floating Navigation Toolbar -->
   <div class="bottom-nav-bar" id="bottomNav">
     <button type="button" class="nav-arrow-btn" id="prevSlideBtn" title="Slide trước (← hoặc Phím lên)"
       aria-label="Slide trước"><i class="bi bi-chevron-left"></i></button>
-    <div class="slide-indicator-label" id="slideIndicatorLabel">01 / 10</div>
+    <div class="slide-indicator-label" id="slideIndicatorLabel">01 / 11</div>
     <button type="button" class="nav-arrow-btn" id="nextSlideBtn" title="Slide kế (→ hoặc Phím cách)"
       aria-label="Slide kế tiếp"><i class="bi bi-chevron-right"></i></button>
     <button type="button" class="nav-arrow-btn" id="fullScreenBtn" title="Toàn màn hình trình chiếu (Phím F)"
