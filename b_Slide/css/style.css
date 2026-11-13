@@ -2713,7 +2713,7 @@
 }
 
 
-    /* Slide 01b: Tổng Quan Dự Án & Bối Cảnh Thực Tế */
+    /* Slide 01b: Tổng Quan Dự Án MedSched (3 Trụ Cột Nghiệp Vụ) */
     #slide-01b .content-box {
       display: flex !important;
       flex-direction: column !important;
@@ -2725,9 +2725,9 @@
       flex-grow: 0 !important;
       padding: 6px 0 !important;
     }
-    .module-card-problem { border-top: 4px solid #ef4444 !important; }
-    .module-card-solution { border-top: 4px solid #0284c7 !important; }
-    .module-card-value { border-top: 4px solid #10b981 !important; }
+    .module-card-pillar1 { border-top: 4px solid #0284c7 !important; }
+    .module-card-pillar2 { border-top: 4px solid #0d9488 !important; }
+    .module-card-pillar3 { border-top: 4px solid #7c3aed !important; }
     
     .overview-summary-bar {
       background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;

@@ -16,15 +16,17 @@
 
 ---
 
-## Slide 2 — Tổng quan dự án & Bối cảnh thực tế (0:15–0:45)
+## Slide 2 — Tổng quan hệ thống MedSched (0:15–0:45)
 
 **Lời nói:**
 
-“Xuất phát từ thực trạng hiện nay, người bệnh thường phải đến cơ sở y tế từ rất sớm, bốc số giấy và mệt mỏi chờ đợi hàng giờ; trong khi các phòng khám thiếu công cụ điều phối dẫn đến tình trạng khung giờ quá tải, khung giờ lại trống.
+“MedSched là hệ thống đặt lịch khám bệnh thông minh và quản lý quy trình khám chữa bệnh khép kín cho phòng khám, cơ sở y tế. Dự án tập trung giải quyết ba trụ cột nghiệp vụ cốt lõi:
 
-MedSched ra đời nhằm mang lại giải pháp số hóa toàn diện: giúp bệnh nhân chủ động chọn bác sĩ, khung giờ khám trực tuyến và tiếp đón nhanh qua mã QR; đồng thời hỗ trợ cơ sở y tế điều phối luồng khám khoa học, tối ưu công suất và số hóa khép kín toàn bộ quy trình ca khám.”
+Thứ nhất là Cổng đặt lịch trực tuyến đa kênh và tiếp đón không chạm qua mã QR hoặc CCCD gắn chip.
+Thứ hai là Không gian buồng khám bác sĩ, hỗ trợ điều phối hàng đợi, lập bệnh án điện tử theo chuẩn ICD-10 và kê đơn thuốc số hóa.
+Thứ ba là Quản lý viện phí, hỗ trợ thanh toán linh hoạt qua VietQR hoặc tiền mặt, cùng hệ thống quản trị danh mục và phân quyền chặt chẽ.”
 
-**Chuyển ý:** “Để vận hành giải pháp này, hệ thống được thiết kế phục vụ bốn vai trò người dùng cốt lõi.”
+**Chuyển ý:** “Ba trụ cột nghiệp vụ này được phân bổ tương ứng cho bốn vai trò người dùng cốt lõi.”
 
 ---
 
